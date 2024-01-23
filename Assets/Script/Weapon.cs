@@ -7,10 +7,30 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-    // Update is called once per frame
+    public KeyCode[] validSequenceKeys = new[] 
+    {
+        KeyCode.Q,
+        KeyCode.W,
+        KeyCode.E,
+        KeyCode.R
+    };
+    //roba trovata su di un forum, capire cosa esattamente fa ma era in risposta a "random sequence of keys to press"
+    /*KeyCode[] GenerateSequence(int length = 6)
+    {
+        KeyCode[] sequence = new KeyCode[length];
+
+        for (int i = 0; i < length; i++)
+        {
+            var key = validSequenceKeys[Random.Range(0, validSequenceKeys.Length)];
+            sequence[i] = key;
+        }
+
+        return sequence;
+    }*/
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W)) //questo fire1 si riferice ad una variabile che può essere cambiata in una finestra di unity, ma devo poi cambiarla in un valore randomico in base al samurai
+        if (Input.GetKeyDown(KeyCode.W)) //dovrebbe controllaser se il tasto premuto è giusto 
         {
             Shoot();
         }
