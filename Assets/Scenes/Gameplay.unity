@@ -2082,6 +2082,8 @@ MonoBehaviour:
   countdownLoad: {fileID: 783630803}
   countdownAim: {fileID: 1599825781}
   countdownShoot: {fileID: 1049479916}
+  minRandomCountDownShoot: 1
+  maxRandomCountDownShoot: 5
 --- !u!4 &1477602293
 Transform:
   m_ObjectHideFlags: 0

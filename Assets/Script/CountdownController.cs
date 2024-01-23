@@ -10,6 +10,8 @@ public class CountdownController : MonoBehaviour
     public GameObject countdownLoad; //TextMeshProUGUI Serve per il testo di TextMeshPro
     public GameObject countdownAim;
     public GameObject countdownShoot;
+    public float minRandomCountDownShoot;
+    public float maxRandomCountDownShoot;
 
     private void Start()
     {
@@ -34,7 +36,7 @@ public class CountdownController : MonoBehaviour
             countdownAim.SetActive(true);
             countdownShoot.SetActive(false);
 
-            float wait_time = Random.Range(1, 5);
+            float wait_time = Random.Range(minRandomCountDownShoot, maxRandomCountDownShoot);
             yield return new WaitForSeconds(wait_time);
         }
 
