@@ -34,10 +34,11 @@ public class CountdownController : MonoBehaviour
             countdownAim.SetActive(true);
             countdownShoot.SetActive(false);
 
-            float wait_time = Random.Range(0.5f, 5);
+            float wait_time = Random.Range(1, 5);
             yield return new WaitForSeconds(wait_time);
         }
 
+        countdownAim.SetActive(false);
         countdownShoot.SetActive(true);
                                                 //GameController.instance.BeginGame(); il video parlava di come ha una classe gamecontroller che fa partire il gioco accendendo input e ste cose
         yield return new WaitForSeconds(1f);
