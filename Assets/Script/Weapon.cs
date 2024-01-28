@@ -42,7 +42,7 @@ public class Weapon : MonoBehaviour
     {
         bool isTimeToShoot = CountdownControllerIstance.timeToshoot;
 
-        if (isTimeToShoot == true)               //&& randomValue == la seconda condizione è che nell arrey viene sorteggiato la lettere Q. Possibile togliere la condizione del timeToShoot?
+        if (isTimeToShoot == true)               //&& randomValue == "Q" la seconda condizione è che nell arrey viene sorteggiato la lettere Q. Possibile togliere la condizione del timeToShoot?
         {
             ButtonQ.SetActive(true);
 
