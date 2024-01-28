@@ -52,7 +52,7 @@ public class CountdownController : MonoBehaviour
         countdownShoot.SetActive(true);
         timeToshoot = true;
                                                 //GameController.instance.BeginGame(); il video parlava di come ha una classe gamecontroller che fa partire il gioco accendendo input e ste cose
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.4f);
         countdownShoot.SetActive(false);
 
         yield return new WaitForSeconds(5f);    // Se entrambi i gioctori hanno sparato allora il countdown si ferma

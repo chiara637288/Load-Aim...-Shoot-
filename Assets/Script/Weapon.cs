@@ -11,40 +11,45 @@ public class Weapon : MonoBehaviour
     public GameObject ButtonW;
     public GameObject ButtonE;
     public GameObject ButtonR;
-    public CountdownController timeToshoot;
+    public GameObject ButtonT;
+    public GameObject ButtonY;
+    public CountdownController CountdownControllerIstance;
 
-    public KeyCode[] validSequenceKeys = new[] 
-    {
-        KeyCode.Q,
-        KeyCode.W,
-        KeyCode.E,
-        KeyCode.R
+    string[] myArray = 
+    {   "Q", 
+        "W", 
+        "E", 
+        "R", 
+        "T", 
+        "Y" 
     };
-    //roba trovata su di un forum, capire cosa esattamente fa ma era in risposta a "random sequence of keys to press"
 
-    /*KeyCode[] GenerateSequence(int length = 4)
+    string GetRandomValue()                                         // Function to randomly pick a value from the array
     {
-         KeyCode[] sequence = new KeyCode[length];
+        int randomIndex = Random.Range(0, myArray.Length);          // Use Random.Range to generate a random index within the array length
 
-         for (int i = 0; i < length; i++)
-         {
-             var key = validSequenceKeys[Random.Range(0, validSequenceKeys.Length)];
-             sequence[i] = key;
-         }
+        return myArray[randomIndex];                                // Return the value at the randomly generated index
+    }
 
-         return sequence; 
-     }*/
+    void Start()
+    {
+        string randomValue = GetRandomValue();                      // Call the function to randomly pick a value from the array
+        Debug.Log("Randomly picked value: " + randomValue);
+    }
+
 
     void Update()
     {
-        if (timeToshoot = true && )                                          //la seconda condizione è che nell arrey viene sorteggiato la lettere Q
+        bool isTimeToShoot = CountdownControllerIstance.timeToshoot;
+
+        if (isTimeToShoot == true)               //&& randomValue == la seconda condizione è che nell arrey viene sorteggiato la lettere Q. Possibile togliere la condizione del timeToShoot?
         {
             ButtonQ.SetActive(true);
 
         }
 
 
-        if (timeToshoot = true && Input.GetKeyDown(KeyCode.Q) &&  )          //dovrebbe 1 controllase se viene premuto uno dei tasti possibili, 2 se viene premuto quando è tempo di sparare,
+        if (isTimeToShoot == true && Input.GetKeyDown(KeyCode.Q))          //dovrebbe 1 controllase se viene premuto uno dei tasti possibili, 2 se viene premuto quando è tempo di sparare,
         {                                                                    //3 che il tasto premuto è quello giusto, 4 che il tempo per sparare non sia scaduto e 5 che il player non è morto. 
             Shoot();                                                         //Ripetere poi l'"if" per tutti i tasti disponibili.
         }
