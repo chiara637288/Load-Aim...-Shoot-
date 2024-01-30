@@ -55,7 +55,7 @@ public class CountdownController : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         countdownShoot.SetActive(false);
 
-        yield return new WaitForSeconds(5f);    // Se entrambi i gioctori hanno sparato allora il countdown si ferma
+        yield return new WaitForSeconds(200f); // mettere a 5   // Se entrambi i gioctori hanno sparato allora il countdown si ferma
         countdown5.SetActive(true);
 
         yield return new WaitForSeconds(1f);

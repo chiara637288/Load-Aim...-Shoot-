@@ -100,6 +100,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rb: {fileID: -5305534673879751743}
+  knight: {fileID: 7307804514707808665, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
+  slowDistance: 4
+  velocitaRallentamento: 6
+  minVelocity: 0.001
 --- !u!50 &-5305534673879751743
 Rigidbody2D:
   serializedVersion: 4
@@ -126,4 +130,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 2
