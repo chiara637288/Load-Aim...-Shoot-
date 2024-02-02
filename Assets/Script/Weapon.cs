@@ -15,50 +15,116 @@ public class Weapon : MonoBehaviour
     public GameObject ButtonY;
     public CountdownController CountdownControllerIstance;
 
-    string[] myArray = 
-    {   "Q", 
-        "W", 
-        "E", 
-        "R", 
-        "T", 
-        "Y" 
-    };
-
-    string GetRandomValue()                                         // Function to randomly pick a value from the array
-    {
-        int randomIndex = Random.Range(0, myArray.Length);          // Use Random.Range to generate a random index within the array length
-
-        return myArray[randomIndex];                                // Return the value at the randomly generated index
-    }
+    string[] myArray = { "Q", "W", "E", "R", "T", "Y" };
+    string randomValue;
 
     void Start()
     {
-        string randomValue = GetRandomValue();                      // Call the function to randomly pick a value from the array
+        // Call the function to randomly pick a value from the array at the beginning
+        randomValue = GetRandomValue();
         Debug.Log("Randomly picked value: " + randomValue);
     }
-
 
     void Update()
     {
         bool isTimeToShoot = CountdownControllerIstance.timeToshoot;
 
-        if (isTimeToShoot == true)               //&& randomValue == "Q" la seconda condizione è che nell arrey viene sorteggiato la lettere Q. Possibile togliere la condizione del timeToShoot?
+        if (isTimeToShoot)
         {
-            ButtonQ.SetActive(true);
-
+            DisplayButton(randomValue, CountdownControllerIstance.timeToshoot);                 // Display the corresponding button based on the random value
+            // Check if the corresponding key is pressed
+            if (Input.GetKeyDown(KeyCode.Q) && randomValue == "Q")
+            {
+                Shoot();
+            }
+            if (Input.GetKeyDown(KeyCode.W) && randomValue == "W")
+            {
+                Shoot();
+            }
+            if (Input.GetKeyDown(KeyCode.E) && randomValue == "E")
+            {
+                Shoot();
+            }
+            if (Input.GetKeyDown(KeyCode.R) && randomValue == "R")
+            {
+                Shoot();
+            }
+            if (Input.GetKeyDown(KeyCode.T) && randomValue == "T")
+            {
+                Shoot();
+            }
+            if (Input.GetKeyDown(KeyCode.Y) && randomValue == "Y")
+            {
+                Shoot();
+            }
         }
+    }
 
-
-        if (isTimeToShoot == true && Input.GetKeyDown(KeyCode.Q))          //dovrebbe 1 controllase se viene premuto uno dei tasti possibili, 2 se viene premuto quando è tempo di sparare,
-        {                                                                    //3 che il tasto premuto è quello giusto, 4 che il tempo per sparare non sia scaduto e 5 che il player non è morto. 
-            Shoot();                                                         //Ripetere poi l'"if" per tutti i tasti disponibili.
+    void DisplayButton(string value, bool isVisiblee)
+    {
+        // Display the corresponding button based on the input value
+        switch (value)
+        {
+            case "Q":
+                ButtonQ.SetActive(true);
+                break;
+            case "W":
+                ButtonW.SetActive(true);
+                break;
+            case "E":
+                ButtonE.SetActive(true);
+                break;
+            case "R":
+                ButtonR.SetActive(true);
+                break;
+            case "T":
+                ButtonT.SetActive(true);
+                break;
+            case "Y":
+                ButtonY.SetActive(true);
+                break;
         }
-
     }
 
     void Shoot()
     {
-        //shooting Spawn
+        // Shooting spawn
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+        // Hide the button after shooting
+        switch (randomValue)
+        {
+            case "Q":
+                ButtonQ.SetActive(false);
+                break;
+            case "W":
+                ButtonW.SetActive(false);
+                break;
+            case "E":
+                ButtonE.SetActive(false);
+                break;
+            case "R":
+                ButtonR.SetActive(false);
+                break;
+            case "T":
+                ButtonT.SetActive(false);
+                break;
+            case "Y":
+                ButtonY.SetActive(false);
+                break;
+        }
+
+        // Call the function to randomly pick a new value from the array
+        randomValue = GetRandomValue();
+        Debug.Log("Randomly picked value: " + randomValue);
+
+        // Display the corresponding button based on the new random value
+        DisplayButton(randomValue, CountdownControllerIstance.timeToshoot); ;
+    }
+
+    string GetRandomValue()
+    {
+        int randomIndex = Random.Range(0, myArray.Length);
+        return myArray[randomIndex];
     }
 }
