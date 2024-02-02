@@ -32,10 +32,11 @@ public class Weapon : MonoBehaviour
         if (isTimeToShoot)
         {
             DisplayButton(randomValue, CountdownControllerIstance.timeToshoot);                 // Display the corresponding button based on the random value
+
             // Check if the corresponding key is pressed
             if (Input.GetKeyDown(KeyCode.Q) && randomValue == "Q")
             {
-                Shoot();
+                Shoot();                                                                         //  isTimeToShoot = false; dovrebbe far smettere di funzionare lo sparo ma dunno non va
             }
             if (Input.GetKeyDown(KeyCode.W) && randomValue == "W")
             {
@@ -60,7 +61,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    void DisplayButton(string value, bool isVisiblee)
+    void DisplayButton(string value, bool isVisible)
     {
         // Display the corresponding button based on the input value
         switch (value)
