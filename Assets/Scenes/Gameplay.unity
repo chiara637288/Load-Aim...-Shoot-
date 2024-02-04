@@ -4212,7 +4212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1646367467837598365, guid: 22b9f0ad22e91e94b8f6f77eba63cff5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9166
+      value: 0.591
       objectReference: {fileID: 0}
     - target: {fileID: 1646367467837598365, guid: 22b9f0ad22e91e94b8f6f77eba63cff5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4250,6 +4250,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5850130753647095486, guid: 22b9f0ad22e91e94b8f6f77eba63cff5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9137835
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850130753647095486, guid: 22b9f0ad22e91e94b8f6f77eba63cff5, type: 3}
+      propertyPath: m_Size.y
+      value: 0.29962116
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850130753647095486, guid: 22b9f0ad22e91e94b8f6f77eba63cff5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.076655954
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850130753647095486, guid: 22b9f0ad22e91e94b8f6f77eba63cff5, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0060281456
+      objectReference: {fileID: 0}
     - target: {fileID: 7664098291864385324, guid: 22b9f0ad22e91e94b8f6f77eba63cff5, type: 3}
       propertyPath: m_Name
       value: TriggerKnight2
@@ -4267,6 +4283,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4945785336912806702, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4945785336912806702, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
       propertyPath: m_IsTrigger
       value: 1

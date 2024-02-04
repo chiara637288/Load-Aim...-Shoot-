@@ -121,12 +121,6 @@ public class Weapon : MonoBehaviour
                 break;
         }
 
-        // Call the function to randomly pick a new value from the array
-        //randomValue = GetRandomValue();
-        //Debug.Log("Randomly picked value: " + randomValue);
-
-        // Display the corresponding button based on the new random value
-        //DisplayButton(randomValue, CountdownControllerIstance.timeToshoot);
     }
 
     string GetRandomValue()

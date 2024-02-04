@@ -32,12 +32,16 @@ public class Bullet : MonoBehaviour
             // Applica la velocità decelerata al proiettile
             rb.velocity = rb.velocity.normalized * velocitaDecelerata;
         }
+        if (inTrigger == false)
+        {
+            rb.velocity = transform.right * velocitaIniziale;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Verifica se l'oggetto trigger è uguale all'oggetto desiderato
-        if (other.gameObject == oggettoTrigger)
+        if (other.gameObject.CompareTag("Rallentatore") )
         {
             inTrigger = true;
         }
@@ -46,7 +50,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         // Verifica se l'oggetto trigger è uguale all'oggetto desiderato
-        if (other.gameObject == oggettoTrigger)
+        if (other.gameObject.CompareTag("Rallentatore"))
         {
             inTrigger = false;
         }
