@@ -37,26 +37,32 @@ public class Weapon : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q) && randomValue == "Q")
             {
                 Shoot();                                                                         //  isTimeToShoot = false; dovrebbe far smettere di funzionare lo sparo ma dunno non va
+                CountdownControllerIstance.timeToshoot = false;
             }
             if (Input.GetKeyDown(KeyCode.W) && randomValue == "W")
             {
                 Shoot();
+                CountdownControllerIstance.timeToshoot = false;
             }
             if (Input.GetKeyDown(KeyCode.E) && randomValue == "E")
             {
                 Shoot();
+                CountdownControllerIstance.timeToshoot = false;
             }
             if (Input.GetKeyDown(KeyCode.R) && randomValue == "R")
             {
                 Shoot();
+                CountdownControllerIstance.timeToshoot = false;
             }
             if (Input.GetKeyDown(KeyCode.T) && randomValue == "T")
             {
                 Shoot();
+                CountdownControllerIstance.timeToshoot = false;
             }
             if (Input.GetKeyDown(KeyCode.Y) && randomValue == "Y")
             {
                 Shoot();
+                CountdownControllerIstance.timeToshoot = false;
             }
         }
     }
@@ -116,11 +122,11 @@ public class Weapon : MonoBehaviour
         }
 
         // Call the function to randomly pick a new value from the array
-        randomValue = GetRandomValue();
-        Debug.Log("Randomly picked value: " + randomValue);
+        //randomValue = GetRandomValue();
+        //Debug.Log("Randomly picked value: " + randomValue);
 
         // Display the corresponding button based on the new random value
-        DisplayButton(randomValue, CountdownControllerIstance.timeToshoot); ;
+        //DisplayButton(randomValue, CountdownControllerIstance.timeToshoot);
     }
 
     string GetRandomValue()
