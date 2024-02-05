@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BulletR : MonoBehaviour
 {
     public float velocitaIniziale = 10f; // Velocità iniziale del proiettile
     public float velocitaMinima = 1f; // Velocità minima consentita
@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         // Assegna la velocità iniziale al proiettile
-        rb.velocity = transform.right * velocitaIniziale;
+        rb.velocity = -transform.right * velocitaIniziale;
     }
 
     private void Update()
@@ -34,14 +34,14 @@ public class Bullet : MonoBehaviour
         }
         if (inTrigger == false)
         {
-            rb.velocity = transform.right * velocitaIniziale;
+            rb.velocity = - transform.right * velocitaIniziale;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Verifica se l'oggetto trigger è uguale all'oggetto desiderato
-        if (other.gameObject.CompareTag("Rallentatore") )
+        if (other.gameObject.CompareTag("RallentatoreR") )
         {
             inTrigger = true;
         }
@@ -50,7 +50,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         // Verifica se l'oggetto trigger è uguale all'oggetto desiderato
-        if (other.gameObject.CompareTag("Rallentatore"))
+        if (other.gameObject.CompareTag("RallentatoreR"))
         {
             inTrigger = false;
         }
