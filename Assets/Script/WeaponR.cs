@@ -13,21 +13,35 @@ public class WeaponR : MonoBehaviour
     public GameObject ButtonU;
     public GameObject ButtonL;
     public GameObject ButtonK;
+
+    public GameObject ButtonM; // Elencare i bottoni che quando accesi mostrano al giocatore quale pulsante premere.
+    public GameObject ButtonN;
+    public GameObject ButtonB;
+    public GameObject ButtonV;
+    public GameObject ButtonJ;
+    public GameObject ButtonH;
     public CountdownController CountdownControllerIstance;
+    public BulletL ParryMoment;
 
     string[] myArray = { "P", "O", "I", "U", "L", "K" };
+    string[] parryArray = { "M", "N", "B", "V", "J", "H" };
     string randomValue;
+    string randomValueParry;
 
     void Start()
     {
         // Call the function to randomly pick a value from the array at the beginning
-        randomValue = GetRandomValue();
+        randomValue = GetRandomValue(myArray);
         Debug.Log("Randomly picked value: " + randomValue);
+
+        randomValueParry = GetRandomValue(parryArray);
+        Debug.Log("Randomly picked value: " + randomValueParry);
     }
 
     void Update()
     {
         bool isTimeToShootR = CountdownControllerIstance.timeToshootR;
+        bool myParryMoment = ParryMoment.parryMomentL;
 
         if (isTimeToShootR)
         {
@@ -65,12 +79,43 @@ public class WeaponR : MonoBehaviour
                 CountdownControllerIstance.timeToshootR = false;
             }
         }
+
+        if (myParryMoment == true)
+        {
+            DisplayButton(randomValue, CountdownControllerIstance.timeToshootR);                 // Display the corresponding button based on the random value
+
+            if (Input.GetKeyDown(KeyCode.M) && randomValue == "M")                               // Check if the corresponding key is pressed
+            {
+                ParryMoment.parryMomentL = false;
+            }
+            if (Input.GetKeyDown(KeyCode.N) && randomValue == "N")
+            {
+                ParryMoment.parryMomentL = false;
+            }
+            if (Input.GetKeyDown(KeyCode.B) && randomValue == "B")
+            {
+                ParryMoment.parryMomentL = false;
+            }
+            if (Input.GetKeyDown(KeyCode.V) && randomValue == "V")
+            {
+                ParryMoment.parryMomentL = false;
+            }
+            if (Input.GetKeyDown(KeyCode.J) && randomValue == "J")
+            {
+                ParryMoment.parryMomentL = false;
+            }
+            if (Input.GetKeyDown(KeyCode.H) && randomValue == "H")
+            {
+                ParryMoment.parryMomentL = false;
+            }
+        }
+
     }
 
-    void DisplayButton(string value, bool isVisible)
+   void DisplayButton(string value, bool isVisible) 
     {
         // Display the corresponding button based on the input value
-        switch (value)
+         switch (value)
         {
             case "P":
                 ButtonP.SetActive(true);
@@ -121,11 +166,40 @@ public class WeaponR : MonoBehaviour
                 break;
         }
 
+        switch (randomValueParry)
+        {
+            case "M":
+                ButtonM.SetActive(false);
+                break;
+            case "N":
+                ButtonN.SetActive(false);
+                break;
+            case "B":
+                ButtonB.SetActive(false);
+                break;
+            case "V":
+                ButtonV.SetActive(false);
+                break;
+            case "J":
+                ButtonJ.SetActive(false);
+                break;
+            case "H":
+                ButtonH.SetActive(false);
+                break;
+        }
     }
 
-    string GetRandomValue()
+    string GetRandomValue(string[] myArray)
     {
         int randomIndex = Random.Range(0, myArray.Length);
         return myArray[randomIndex];
+
+    }
+
+    string GetRandomValueParry()
+    {
+
+        int randomIndexParry = Random.Range(0, parryArray.Length);
+        return myArray[randomIndexParry];
     }
 }

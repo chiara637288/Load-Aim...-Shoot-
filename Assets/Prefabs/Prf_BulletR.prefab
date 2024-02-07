@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 36869336431034140}
   - component: {fileID: 1721957232172429042}
-  - component: {fileID: 7146569854553067916}
   - component: {fileID: -5305534673879751743}
   - component: {fileID: 6437010715179323614}
+  - component: {fileID: 4423126051060721953}
   m_Layer: 0
   m_Name: Prf_BulletR
   m_TagString: Untagged
@@ -87,22 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7146569854553067916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8558177096698333003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44480f793a11c35419560cd093b41cb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocitaIniziale: 10
-  velocitaMinima: 0.1
-  velocitaDecelerazione: 60
-  oggettoTrigger: {fileID: 2288236651822864539, guid: d1b6ccc8fe84b0048bfb1b7c6a9990d5, type: 3}
 --- !u!50 &-5305534673879751743
 Rigidbody2D:
   serializedVersion: 4
@@ -175,3 +159,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.11}
   m_EdgeRadius: 0
+--- !u!114 &4423126051060721953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8558177096698333003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 590251b1037e7ea40932ab3edb3ac272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocitaIniziale: -10
+  velocitaMinima: 0.1
+  velocitaDecelerazione: 60
+  oggettoTrigger: {fileID: 7704572664198947889, guid: acbee482a56ca59489ad71905118add9, type: 3}

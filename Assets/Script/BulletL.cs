@@ -9,8 +9,10 @@ public class BulletL : MonoBehaviour
     public float velocitaDecelerazione = 2f; // Fattore di decelerazione graduale
     public GameObject oggettoTrigger; // Oggetto con Collider2D per il trigger
 
+
     private Rigidbody2D rb;
     private bool inTrigger = false;
+    public bool parryMomentL = false;
 
     private void Start()
     {
@@ -19,6 +21,8 @@ public class BulletL : MonoBehaviour
 
         // Assegna la velocità iniziale al proiettile
         rb.velocity = transform.right * velocitaIniziale;
+
+        parryMomentL = true;
     }
 
     private void Update()
