@@ -102,7 +102,7 @@ MonoBehaviour:
   velocitaIniziale: 10
   velocitaMinima: 0.1
   velocitaDecelerazione: 60
-  oggettoTrigger: {fileID: 7664098291864385324, guid: 22b9f0ad22e91e94b8f6f77eba63cff5, type: 3}
+  oggettoTrigger: {fileID: 7704572664198947889, guid: acbee482a56ca59489ad71905118add9, type: 3}
 --- !u!50 &-5305534673879751743
 Rigidbody2D:
   serializedVersion: 4

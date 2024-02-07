@@ -19,7 +19,8 @@ public class CountdownController : MonoBehaviour
     public GameObject countdownTimesUp;
     public float minRandomCountDownShoot;
     public float maxRandomCountDownShoot;
-    public bool timeToshoot = false;
+    public bool timeToshootL = false;
+    public bool timeToshootR = false;
 
     private void Start()
     {
@@ -50,8 +51,10 @@ public class CountdownController : MonoBehaviour
 
         countdownAim.SetActive(false);
         countdownShoot.SetActive(true);
-        timeToshoot = true;
-                                                //GameController.instance.BeginGame(); il video parlava di come ha una classe gamecontroller che fa partire il gioco accendendo input e ste cose
+
+        timeToshootL = true;
+        timeToshootR = true;
+        //GameController.instance.BeginGame(); il video parlava di come ha una classe gamecontroller che fa partire il gioco accendendo input e ste cose
         yield return new WaitForSeconds(0.4f);
         countdownShoot.SetActive(false);
 
@@ -77,6 +80,8 @@ public class CountdownController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         countdown1.SetActive(false);
         countdownTimesUp.SetActive(true);
-        timeToshoot = false;
+
+        timeToshootL = false;
+        timeToshootR = false;
     }
 }

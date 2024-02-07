@@ -27,42 +27,42 @@ public class WeaponR : MonoBehaviour
 
     void Update()
     {
-        bool isTimeToShootR = CountdownControllerIstance.timeToshoot;
+        bool isTimeToShootR = CountdownControllerIstance.timeToshootR;
 
         if (isTimeToShootR)
         {
-            DisplayButton(randomValue, CountdownControllerIstance.timeToshoot);                 // Display the corresponding button based on the random value
+            DisplayButton(randomValue, CountdownControllerIstance.timeToshootR);                 // Display the corresponding button based on the random value
 
             // Check if the corresponding key is pressed
             if (Input.GetKeyDown(KeyCode.P) && randomValue == "P")
             {
                 Shoot();                                                                         //  isTimeToShoot = false; dovrebbe far smettere di funzionare lo sparo ma dunno non va
-                CountdownControllerIstance.timeToshoot = false;
+                CountdownControllerIstance.timeToshootR = false;
             }
             if (Input.GetKeyDown(KeyCode.O) && randomValue == "O")
             {
                 Shoot();
-                CountdownControllerIstance.timeToshoot = false;
+                CountdownControllerIstance.timeToshootR = false;
             }
             if (Input.GetKeyDown(KeyCode.I) && randomValue == "I")
             {
                 Shoot();
-                CountdownControllerIstance.timeToshoot = false;
+                CountdownControllerIstance.timeToshootR = false;
             }
             if (Input.GetKeyDown(KeyCode.U) && randomValue == "U")
             {
                 Shoot();
-                CountdownControllerIstance.timeToshoot = false;
+                CountdownControllerIstance.timeToshootR = false;
             }
             if (Input.GetKeyDown(KeyCode.L) && randomValue == "L")
             {
                 Shoot();
-                CountdownControllerIstance.timeToshoot = false;
+                CountdownControllerIstance.timeToshootR = false;
             }
             if (Input.GetKeyDown(KeyCode.K) && randomValue == "K")
             {
                 Shoot();
-                CountdownControllerIstance.timeToshoot = false;
+                CountdownControllerIstance.timeToshootR = false;
             }
         }
     }
