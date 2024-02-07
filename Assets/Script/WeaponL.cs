@@ -22,6 +22,7 @@ public class WeaponL : MonoBehaviour
     {
         // Call the function to randomly pick a value from the array at the beginning
         randomValue = GetRandomValue();
+        Debug.Log("Randomly picked value: " + randomValue);
     }
 
     void Update()

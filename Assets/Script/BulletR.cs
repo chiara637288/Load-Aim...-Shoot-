@@ -11,6 +11,7 @@ public class BulletR : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool inTrigger = false;
+    public bool parryMomentR = false;
 
     private void Start()
     {
@@ -19,6 +20,8 @@ public class BulletR : MonoBehaviour
 
         // Assegna la velocità iniziale al proiettile
         rb.velocity = -transform.right * velocitaIniziale;
+
+        parryMomentR = true;
     }
 
     private void Update()

@@ -21,7 +21,7 @@ public class WeaponR : MonoBehaviour
     public GameObject ButtonJ;
     public GameObject ButtonH;
     public CountdownController CountdownControllerIstance;
-    public BulletL ParryMoment;
+    private BulletL bulletL;
 
     string[] myArray = { "P", "O", "I", "U", "L", "K" };
     string[] parryArray = { "M", "N", "B", "V", "J", "H" };
@@ -35,13 +35,13 @@ public class WeaponR : MonoBehaviour
         Debug.Log("Randomly picked value: " + randomValue);
 
         randomValueParry = GetRandomValue(parryArray);
-        Debug.Log("Randomly picked value: " + randomValueParry);
+        Debug.Log("Randomly picked value parry : " + randomValueParry);
     }
 
     void Update()
     {
+        bulletL = FindObjectOfType<BulletL>();
         bool isTimeToShootR = CountdownControllerIstance.timeToshootR;
-        bool myParryMoment = ParryMoment.parryMomentL;
 
         if (isTimeToShootR)
         {
@@ -79,34 +79,36 @@ public class WeaponR : MonoBehaviour
                 CountdownControllerIstance.timeToshootR = false;
             }
         }
-
-        if (myParryMoment == true)
+        if (bulletL != null)
         {
-            DisplayButton(randomValue, CountdownControllerIstance.timeToshootR);                 // Display the corresponding button based on the random value
+            if (bulletL.parryMomentL)
+            {
+                DisplayButtonParry(randomValueParry, CountdownControllerIstance.timeToshootR);                 // Display the corresponding button based on the random value
 
-            if (Input.GetKeyDown(KeyCode.M) && randomValue == "M")                               // Check if the corresponding key is pressed
-            {
-                ParryMoment.parryMomentL = false;
-            }
-            if (Input.GetKeyDown(KeyCode.N) && randomValue == "N")
-            {
-                ParryMoment.parryMomentL = false;
-            }
-            if (Input.GetKeyDown(KeyCode.B) && randomValue == "B")
-            {
-                ParryMoment.parryMomentL = false;
-            }
-            if (Input.GetKeyDown(KeyCode.V) && randomValue == "V")
-            {
-                ParryMoment.parryMomentL = false;
-            }
-            if (Input.GetKeyDown(KeyCode.J) && randomValue == "J")
-            {
-                ParryMoment.parryMomentL = false;
-            }
-            if (Input.GetKeyDown(KeyCode.H) && randomValue == "H")
-            {
-                ParryMoment.parryMomentL = false;
+                if (Input.GetKeyDown(KeyCode.M) && randomValueParry == "M")                               // Check if the corresponding key is pressed
+                {
+                    bulletL.parryMomentL = false;
+                }
+                if (Input.GetKeyDown(KeyCode.N) && randomValueParry == "N")
+                {
+                    bulletL.parryMomentL = false;
+                }
+                if (Input.GetKeyDown(KeyCode.B) && randomValueParry == "B")
+                {
+                    bulletL.parryMomentL = false;
+                }
+                if (Input.GetKeyDown(KeyCode.V) && randomValueParry == "V")
+                {
+                    bulletL.parryMomentL = false;
+                }
+                if (Input.GetKeyDown(KeyCode.J) && randomValueParry == "J")
+                {
+                    bulletL.parryMomentL = false;
+                }
+                if (Input.GetKeyDown(KeyCode.H) && randomValueParry == "H")
+                {
+                    bulletL.parryMomentL = false;
+                }
             }
         }
 
@@ -134,6 +136,32 @@ public class WeaponR : MonoBehaviour
                 break;
             case "K":
                 ButtonK.SetActive(true);
+                break;
+
+        }
+    }
+    void DisplayButtonParry(string value2, bool isVisible)
+    {
+        // Display the corresponding button based on the input value
+        switch (value2)
+        {
+            case "M":
+                ButtonM.SetActive(true);
+                break;
+            case "N":
+                ButtonN.SetActive(true);
+                break;
+            case "B":
+                ButtonB.SetActive(true);
+                break;
+            case "V":
+                ButtonV.SetActive(true);
+                break;
+            case "J":
+                ButtonJ.SetActive(true);
+                break;
+            case "H":
+                ButtonH.SetActive(true);
                 break;
         }
     }
