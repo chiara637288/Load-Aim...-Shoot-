@@ -13,16 +13,30 @@ public class WeaponL : MonoBehaviour
     public GameObject ButtonR;
     public GameObject ButtonT;
     public GameObject ButtonY;
+
+    public GameObject ButtonA;
+    public GameObject ButtonS;
+    public GameObject ButtonD;
+    public GameObject ButtonF;
+    public GameObject ButtonZ;
+    public GameObject ButtonX;
+
     public CountdownController CountdownControllerIstance;
+    private BulletR bulletR;
 
     string[] myArray = { "Q", "W", "E", "R", "T", "Y" };
+    string[] parryArrayL = { "A", "S", "D", "F", "Z", "x" };
     string randomValue;
+    string randomValueParryL;
 
     void Start()
     {
         // Call the function to randomly pick a value from the array at the beginning
-        randomValue = GetRandomValue();
+        randomValue = GetRandomValue(myArray);
         Debug.Log("Randomly picked value: " + randomValue);
+
+        randomValueParryL = GetRandomValueParry();
+        Debug.Log("Randomly picked value parryL : " + randomValueParryL);
     }
 
     void Update()
@@ -65,67 +79,154 @@ public class WeaponL : MonoBehaviour
                 CountdownControllerIstance.timeToshootL = false;
             }
         }
+
+        if (bulletR != null)
+        {
+            if (bulletR.parryMomentR)
+            {
+                DisplayButtonParry(randomValueParryL, CountdownControllerIstance.timeToshootR);                 // Display the corresponding button based on the random value
+
+                if (Input.GetKeyDown(KeyCode.A) && randomValueParryL == "A")                               // Check if the corresponding key is pressed
+                {
+                    bulletR.parryMomentR = false;
+                }
+                if (Input.GetKeyDown(KeyCode.S) && randomValueParryL == "S")
+                {
+                    bulletR.parryMomentR = false;
+                }
+                if (Input.GetKeyDown(KeyCode.D) && randomValueParryL == "D")
+                {
+                    bulletR.parryMomentR = false;
+                }
+                if (Input.GetKeyDown(KeyCode.F) && randomValueParryL == "F")
+                {
+                    bulletR.parryMomentR = false;
+                }
+                if (Input.GetKeyDown(KeyCode.Z) && randomValueParryL == "Z")
+                {
+                    bulletR.parryMomentR = false;
+                }
+                if (Input.GetKeyDown(KeyCode.X) && randomValueParryL == "X")
+                {
+                    bulletR.parryMomentR = false;
+                }
+            }
+        }
     }
 
-    void DisplayButton(string value, bool isVisible)
+        void DisplayButton(string value, bool isVisible)
+        {
+            // Display the corresponding button based on the input value
+            switch (value)
+            {
+                case "Q":
+                    ButtonQ.SetActive(true);
+                    break;
+                case "W":
+                    ButtonW.SetActive(true);
+                    break;
+                case "E":
+                    ButtonE.SetActive(true);
+                    break;
+                case "R":
+                    ButtonR.SetActive(true);
+                    break;
+                case "T":
+                    ButtonT.SetActive(true);
+                    break;
+                case "Y":
+                    ButtonY.SetActive(true);
+                    break;
+            }
+        }
+
+    void DisplayButtonParry(string value2, bool isVisible)
     {
         // Display the corresponding button based on the input value
-        switch (value)
+        switch (value2)
         {
-            case "Q":
-                ButtonQ.SetActive(true);
+            case "A":
+                ButtonA.SetActive(true);
                 break;
-            case "W":
-                ButtonW.SetActive(true);
+            case "S":
+                ButtonS.SetActive(true);
                 break;
-            case "E":
-                ButtonE.SetActive(true);
+            case "D":
+                ButtonD.SetActive(true);
                 break;
-            case "R":
-                ButtonR.SetActive(true);
+            case "F":
+                ButtonF.SetActive(true);
                 break;
-            case "T":
-                ButtonT.SetActive(true);
+            case "Z":
+                ButtonZ.SetActive(true);
                 break;
-            case "Y":
-                ButtonY.SetActive(true);
+            case "X":
+                ButtonX.SetActive(true);
                 break;
         }
     }
+            void Shoot()
+            {
+                // Shooting spawn
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
-    void Shoot()
-    {
-        // Shooting spawn
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                // Hide the button after shooting
+                switch (randomValue)
+                {
+                    case "Q":
+                        ButtonQ.SetActive(false);
+                        break;
+                    case "W":
+                        ButtonW.SetActive(false);
+                        break;
+                    case "E":
+                        ButtonE.SetActive(false);
+                        break;
+                    case "R":
+                        ButtonR.SetActive(false);
+                        break;
+                    case "T":
+                        ButtonT.SetActive(false);
+                        break;
+                    case "Y":
+                        ButtonY.SetActive(false);
+                        break;
+                }
 
-        // Hide the button after shooting
-        switch (randomValue)
-        {
-            case "Q":
-                ButtonQ.SetActive(false);
-                break;
-            case "W":
-                ButtonW.SetActive(false);
-                break;
-            case "E":
-                ButtonE.SetActive(false);
-                break;
-            case "R":
-                ButtonR.SetActive(false);
-                break;
-            case "T":
-                ButtonT.SetActive(false);
-                break;
-            case "Y":
-                ButtonY.SetActive(false);
-                break;
-        }
+                switch (randomValueParryL)
+                {
+                    case "A":
+                        ButtonA.SetActive(false);
+                        break;
+                    case "S":
+                        ButtonS.SetActive(false);
+                        break;
+                    case "D":
+                        ButtonD.SetActive(false);
+                        break;
+                    case "F":
+                        ButtonF.SetActive(false);
+                        break;
+                    case "Z":
+                        ButtonZ.SetActive(false);
+                        break;
+                    case "X":
+                        ButtonX.SetActive(false);
+                        break;
+                }
 
-    }
+            }
 
-    string GetRandomValue()
-    {
-        int randomIndex = Random.Range(0, myArray.Length);
-        return myArray[randomIndex];
-    }
+            string GetRandomValue()
+            {
+                int randomIndex = Random.Range(0, myArray.Length);
+                return myArray[randomIndex];
+            }
+            string GetRandomValueParry()
+            {
+
+                int randomIndexParry = Random.Range(0, parryArrayL.Length);
+                return parryArrayL[randomIndexParry];
+            }
+        
 }

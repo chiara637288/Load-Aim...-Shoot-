@@ -9,7 +9,6 @@ public class BulletL : MonoBehaviour
     public float velocitaDecelerazione = 2f; // Fattore di decelerazione graduale
     public GameObject oggettoTrigger; // Oggetto con Collider2D per il trigger
 
-
     private Rigidbody2D rb;
     private bool inTrigger = false;
     public bool parryMomentL = false;
