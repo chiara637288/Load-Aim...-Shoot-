@@ -34,7 +34,7 @@ public class WeaponR : MonoBehaviour
         randomValue = GetRandomValue(myArray);
         Debug.Log("Randomly picked value: " + randomValue);
 
-        randomValueParry = GetRandomValue(parryArray);
+        randomValueParry = GetRandomValueParry(parryArray);
         Debug.Log("Randomly picked value parry : " + randomValueParry);
     }
 
@@ -224,10 +224,9 @@ public class WeaponR : MonoBehaviour
 
     }
 
-    string GetRandomValueParry()
+    string GetRandomValueParry(string[] parryArray)
     {
-
         int randomIndexParry = Random.Range(0, parryArray.Length);
-        return myArray[randomIndexParry];
+        return parryArray[randomIndexParry];
     }
 }

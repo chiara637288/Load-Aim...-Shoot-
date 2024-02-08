@@ -25,7 +25,7 @@ public class WeaponL : MonoBehaviour
     private BulletR bulletR;
 
     string[] myArray = { "Q", "W", "E", "R", "T", "Y" };
-    string[] parryArrayL = { "A", "S", "D", "F", "Z", "x" };
+    string[] parryArrayL = { "A", "S", "D", "F", "Z", "X" };
     string randomValue;
     string randomValueParryL;
 
@@ -35,12 +35,13 @@ public class WeaponL : MonoBehaviour
         randomValue = GetRandomValue(myArray);
         Debug.Log("Randomly picked value: " + randomValue);
 
-        randomValueParryL = GetRandomValueParry();
+        randomValueParryL = GetRandomValueParry(parryArrayL);
         Debug.Log("Randomly picked value parryL : " + randomValueParryL);
     }
 
     void Update()
     {
+        bulletR = FindObjectOfType<BulletR>();
         bool isTimeToShoot = CountdownControllerIstance.timeToshootL;
 
         if (isTimeToShoot)
@@ -84,7 +85,7 @@ public class WeaponL : MonoBehaviour
         {
             if (bulletR.parryMomentR)
             {
-                DisplayButtonParry(randomValueParryL, CountdownControllerIstance.timeToshootR);                 // Display the corresponding button based on the random value
+                DisplayButtonParry(randomValueParryL, CountdownControllerIstance.timeToshootL);                 // Display the corresponding button based on the random value
 
                 if (Input.GetKeyDown(KeyCode.A) && randomValueParryL == "A")                               // Check if the corresponding key is pressed
                 {
@@ -217,14 +218,13 @@ public class WeaponL : MonoBehaviour
 
             }
 
-            string GetRandomValue()
+            string GetRandomValue(string[] myArray)
             {
                 int randomIndex = Random.Range(0, myArray.Length);
                 return myArray[randomIndex];
             }
-            string GetRandomValueParry()
+            string GetRandomValueParry(string[] parryArrayL)
             {
-
                 int randomIndexParry = Random.Range(0, parryArrayL.Length);
                 return parryArrayL[randomIndexParry];
             }
