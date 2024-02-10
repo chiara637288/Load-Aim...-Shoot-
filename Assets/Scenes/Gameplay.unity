@@ -4095,6 +4095,7 @@ MonoBehaviour:
   maxRandomCountDownShoot: 5
   timeToshootL: 0
   timeToshootR: 0
+  timeOver: 0
 --- !u!4 &1477602293
 Transform:
   m_ObjectHideFlags: 0
@@ -5952,6 +5953,14 @@ PrefabInstance:
       propertyPath: CountdownControllerIstance
       value: 
       objectReference: {fileID: 1477602292}
+    - target: {fileID: 8347839700279669743, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
+      propertyPath: CountdownControllerIstance1
+      value: 
+      objectReference: {fileID: 1477602292}
+    - target: {fileID: 8347839700279669743, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
+      propertyPath: CountdownControllerIstanceTimeOver
+      value: 
+      objectReference: {fileID: 1477602292}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6035,6 +6044,14 @@ PrefabInstance:
       objectReference: {fileID: 687407761}
     - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
       propertyPath: CountdownControllerIstance
+      value: 
+      objectReference: {fileID: 1477602292}
+    - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+      propertyPath: CountdownControllerIstance1
+      value: 
+      objectReference: {fileID: 1477602292}
+    - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+      propertyPath: CountdownControllerIstanceTimeOver
       value: 
       objectReference: {fileID: 1477602292}
     - target: {fileID: 8070664890335111517, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}

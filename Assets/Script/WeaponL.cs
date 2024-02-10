@@ -23,6 +23,7 @@ public class WeaponL : MonoBehaviour
 
     public CountdownController CountdownControllerIstance;
     public CountdownController CountdownControllerIstance1;
+    public CountdownController CountdownControllerIstanceTimeOver;
     private BulletR bulletR;
 
     string[] myArray = { "Q", "W", "E", "R", "T", "Y" };
@@ -44,7 +45,8 @@ public class WeaponL : MonoBehaviour
     {
         bulletR = FindObjectOfType<BulletR>();
         bool isTimeToShootL = CountdownControllerIstance.timeToshootL;
-        bool isTimeToShootR = CountdownControllerIstance.timeToshootR;
+        bool isTimeToShootR = CountdownControllerIstance1.timeToshootR;
+        bool isTimeOver = CountdownControllerIstanceTimeOver.timeOver;
 
         if (isTimeToShootL)
         {
@@ -122,7 +124,7 @@ public class WeaponL : MonoBehaviour
             }
         }
 
-        if (isTimeToShootR == false && isTimeToShootL == false)
+        if (isTimeOver == true)
         {
             ButtonQ.SetActive(false);
             ButtonW.SetActive(false);

@@ -21,7 +21,8 @@ public class CountdownController : MonoBehaviour
     public float maxRandomCountDownShoot;
     public bool timeToshootL = false;
     public bool timeToshootR = false;
-    
+    public bool timeOver = false;
+
 
     private void Start()
     {
@@ -84,5 +85,6 @@ public class CountdownController : MonoBehaviour
 
         timeToshootL = false;
         timeToshootR = false;
+        timeOver = true;
     }
 }
