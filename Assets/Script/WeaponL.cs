@@ -22,6 +22,7 @@ public class WeaponL : MonoBehaviour
     public GameObject ButtonX;
 
     public CountdownController CountdownControllerIstance;
+    public CountdownController CountdownControllerIstance1;
     private BulletR bulletR;
 
     string[] myArray = { "Q", "W", "E", "R", "T", "Y" };
@@ -42,9 +43,10 @@ public class WeaponL : MonoBehaviour
     void Update()
     {
         bulletR = FindObjectOfType<BulletR>();
-        bool isTimeToShoot = CountdownControllerIstance.timeToshootL;
+        bool isTimeToShootL = CountdownControllerIstance.timeToshootL;
+        bool isTimeToShootR = CountdownControllerIstance.timeToshootR;
 
-        if (isTimeToShoot)
+        if (isTimeToShootL)
         {
             DisplayButton(randomValue, CountdownControllerIstance.timeToshootL);                 // Display the corresponding button based on the random value
 
@@ -119,6 +121,23 @@ public class WeaponL : MonoBehaviour
                 }
             }
         }
+
+        if (isTimeToShootR == false && isTimeToShootL == false)
+        {
+            ButtonQ.SetActive(false);
+            ButtonW.SetActive(false);
+            ButtonE.SetActive(false);
+            ButtonR.SetActive(false);
+            ButtonT.SetActive(false);
+            ButtonY.SetActive(false);
+            ButtonA.SetActive(false);
+            ButtonS.SetActive(false);
+            ButtonD.SetActive(false);
+            ButtonF.SetActive(false);
+            ButtonZ.SetActive(false);
+            ButtonX.SetActive(false);
+        }
+
     }
 
         void DisplayButton(string value, bool isVisible)

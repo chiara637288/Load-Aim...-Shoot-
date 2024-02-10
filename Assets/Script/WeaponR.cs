@@ -21,6 +21,7 @@ public class WeaponR : MonoBehaviour
     public GameObject ButtonJ;
     public GameObject ButtonH;
     public CountdownController CountdownControllerIstance;
+    public CountdownController CountdownControllerIstance1;
     private BulletL bulletL;
 
     string[] myArray = { "P", "O", "I", "U", "L", "K" };
@@ -42,6 +43,7 @@ public class WeaponR : MonoBehaviour
     {
         bulletL = FindObjectOfType<BulletL>();
         bool isTimeToShootR = CountdownControllerIstance.timeToshootR;
+        bool isTimeToShootL = CountdownControllerIstance.timeToshootL;
 
         if (isTimeToShootR)
         {
@@ -116,6 +118,23 @@ public class WeaponR : MonoBehaviour
                     bulletL.parryMomentL = false;
                 }
             }
+        }
+
+        if (isTimeToShootR == false && isTimeToShootL == false)
+        {
+            ButtonP.SetActive(false);
+            ButtonO.SetActive(false);
+            ButtonI.SetActive(false);
+            ButtonU.SetActive(false);
+            ButtonL.SetActive(false);
+            ButtonK.SetActive(false);
+
+            ButtonM.SetActive(false);
+            ButtonN.SetActive(false);
+            ButtonB.SetActive(false);
+            ButtonV.SetActive(false);
+            ButtonJ.SetActive(false);
+            ButtonH.SetActive(false);
         }
 
     }
