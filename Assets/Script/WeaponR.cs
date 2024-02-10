@@ -87,26 +87,32 @@ public class WeaponR : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.M) && randomValueParry == "M")                               // Check if the corresponding key is pressed
                 {
+                    Parry();
                     bulletL.parryMomentL = false;
                 }
                 if (Input.GetKeyDown(KeyCode.N) && randomValueParry == "N")
                 {
+                    Parry();
                     bulletL.parryMomentL = false;
                 }
                 if (Input.GetKeyDown(KeyCode.B) && randomValueParry == "B")
                 {
+                    Parry();
                     bulletL.parryMomentL = false;
                 }
                 if (Input.GetKeyDown(KeyCode.V) && randomValueParry == "V")
                 {
+                    Parry();
                     bulletL.parryMomentL = false;
                 }
                 if (Input.GetKeyDown(KeyCode.J) && randomValueParry == "J")
                 {
+                    Parry();
                     bulletL.parryMomentL = false;
                 }
                 if (Input.GetKeyDown(KeyCode.H) && randomValueParry == "H")
                 {
+                    Parry();
                     bulletL.parryMomentL = false;
                 }
             }
@@ -193,7 +199,10 @@ public class WeaponR : MonoBehaviour
                 ButtonK.SetActive(false);
                 break;
         }
+    }
 
+    void Parry()
+    {
         switch (randomValueParry)
         {
             case "M":
@@ -217,7 +226,7 @@ public class WeaponR : MonoBehaviour
         }
     }
 
-    string GetRandomValue(string[] myArray)
+        string GetRandomValue(string[] myArray)
     {
         int randomIndex = Random.Range(0, myArray.Length);
         return myArray[randomIndex];
