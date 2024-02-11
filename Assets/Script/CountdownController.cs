@@ -22,11 +22,19 @@ public class CountdownController : MonoBehaviour
     public bool timeToshootL = false;
     public bool timeToshootR = false;
     public bool timeOver = false;
+    private BulletL bulletL;
+    private BulletR bulletR;
 
 
     private void Start()
     {
         StartCoroutine(CountdownToStart());
+    }
+
+    public void Update()
+    {
+        bulletL = FindObjectOfType<BulletL>();
+        bulletR = FindObjectOfType<BulletR>();
     }
 
     IEnumerator CountdownToStart()
@@ -57,34 +65,53 @@ public class CountdownController : MonoBehaviour
         timeToshootL = true;
         timeToshootR = true;
         
-        yield return new WaitForSeconds(0.4f);
-        countdownShoot.SetActive(false);
+       /*if (bulletL.parryMomentL == true && bulletR.parryMomentR == true)
+        {
+            countdownShoot.SetActive(false);
+            countdown5.SetActive(false);
+            countdown4.SetActive(false);
+            countdown3.SetActive(false);
+            countdown2.SetActive(false); 
+            countdown1.SetActive(false);
+            countdownTimesUp.SetActive(false);
 
-        yield return new WaitForSeconds(5f);  // Se entrambi i gioctori hanno sparato allora il countdown si ferma
-        countdown5.SetActive(true);
 
-        yield return new WaitForSeconds(1f);
-        countdown5.SetActive(false);
-        countdown4.SetActive(true);
-        
-        yield return new WaitForSeconds(1f);
-        countdown4.SetActive(false);
-        countdown3.SetActive(true);
-        
-        yield return new WaitForSeconds(1f);
-        countdown3.SetActive(false);
-        countdown2.SetActive(true);
-        
-        yield return new WaitForSeconds(1f);
-        countdown2.SetActive(false);
-        countdown1.SetActive(true);
-        
-        yield return new WaitForSeconds(1f);
-        countdown1.SetActive(false);
-        countdownTimesUp.SetActive(true);
+            timeToshootL = false;
+            timeToshootR = false;
+            timeOver = true;
+        }
+       else
+        {*/
+            yield return new WaitForSeconds(0.4f);
+            countdownShoot.SetActive(false);
 
-        timeToshootL = false;
-        timeToshootR = false;
-        timeOver = true;
+            yield return new WaitForSeconds(5f);  
+            countdown5.SetActive(true);
+
+            yield return new WaitForSeconds(1f);
+            countdown5.SetActive(false);
+            countdown4.SetActive(true);
+
+            yield return new WaitForSeconds(1f);
+            countdown4.SetActive(false);
+            countdown3.SetActive(true);
+
+            yield return new WaitForSeconds(1f);
+            countdown3.SetActive(false);
+            countdown2.SetActive(true);
+
+            yield return new WaitForSeconds(1f);
+            countdown2.SetActive(false);
+            countdown1.SetActive(true);
+
+            yield return new WaitForSeconds(1f);
+            countdown1.SetActive(false);
+            countdownTimesUp.SetActive(true);
+
+            timeToshootL = false;
+            timeToshootR = false;
+            timeOver = true;
+       // }
+
     }
 }
