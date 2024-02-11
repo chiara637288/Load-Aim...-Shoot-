@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7c26da438255dd541b844eb7d03386fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}
@@ -175,4 +175,5 @@ MonoBehaviour:
   velocitaMinima: 0.1
   velocitaDecelerazione: 60
   oggettoTrigger: {fileID: 7704572664198947889, guid: acbee482a56ca59489ad71905118add9, type: 3}
+  currentMatchPlayer1L: {fileID: 0}
   parryMomentR: 0
