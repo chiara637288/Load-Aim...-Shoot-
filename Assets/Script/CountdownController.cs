@@ -112,6 +112,5 @@ public class CountdownController : MonoBehaviour
             timeToshootR = false;
             timeOver = true;
        // }
-
     }
 }
