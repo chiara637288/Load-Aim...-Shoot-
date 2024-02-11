@@ -5866,50 +5866,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2193901071430128499, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2225948179344042660, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.018
-      objectReference: {fileID: 0}
-    - target: {fileID: 2225948179344042660, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.126
-      objectReference: {fileID: 0}
-    - target: {fileID: 2456662953903355051, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.183
-      objectReference: {fileID: 0}
-    - target: {fileID: 2456662953903355051, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.239
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116020624311017346, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: m_Name
-      value: Collider
-      objectReference: {fileID: 0}
-    - target: {fileID: 4945785336912806702, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: m_Size.x
-      value: 0.23747492
-      objectReference: {fileID: 0}
-    - target: {fileID: 4945785336912806702, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: m_Size.y
-      value: 0.41403374
-      objectReference: {fileID: 0}
-    - target: {fileID: 4945785336912806702, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.10061574
-      objectReference: {fileID: 0}
-    - target: {fileID: 4945785336912806702, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.20268922
-      objectReference: {fileID: 0}
-    - target: {fileID: 6014798425996091374, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6114630335275800897, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
       propertyPath: m_Name
       value: Player 2 R
@@ -6007,10 +5963,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1016119982}
     - target: {fileID: 8347839700279669743, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: ParryMoment
-      value: 
-      objectReference: {fileID: 7146569854553067916, guid: f82aa331ec64e9b47bdc0be43f953db3, type: 3}
-    - target: {fileID: 8347839700279669743, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
       propertyPath: CountdownControllerIstance
       value: 
       objectReference: {fileID: 1477602292}
@@ -6022,8 +5974,7 @@ PrefabInstance:
       propertyPath: CountdownControllerIstanceTimeOver
       value: 
       objectReference: {fileID: 1477602292}
-    m_RemovedComponents:
-    - {fileID: 2193901071430128499, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6036,29 +5987,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1504546511279547502, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4459501697513807980, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
       propertyPath: m_Name
       value: Player 1 L
-      objectReference: {fileID: 0}
-    - target: {fileID: 4524197244620314505, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: m_Size.x
-      value: 0.27324486
-      objectReference: {fileID: 0}
-    - target: {fileID: 4524197244620314505, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.08273077
-      objectReference: {fileID: 0}
-    - target: {fileID: 4792921993986329234, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5669422846116776270, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: m_Name
-      value: Collider
       objectReference: {fileID: 0}
     - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
       propertyPath: ButtonA
@@ -6164,24 +6095,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8246283798836092801, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.177
-      objectReference: {fileID: 0}
-    - target: {fileID: 8246283798836092801, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.092
-      objectReference: {fileID: 0}
-    - target: {fileID: 8282071254016017278, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.014999993
-      objectReference: {fileID: 0}
-    - target: {fileID: 8282071254016017278, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.222
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1504546511279547502, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
