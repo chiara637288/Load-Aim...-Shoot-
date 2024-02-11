@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9135184541824165562}
   m_Layer: 0
   m_Name: Prf_BulletL
-  m_TagString: Untagged
+  m_TagString: BulletL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,6 @@ MonoBehaviour:
   velocitaMinima: 0.1
   velocitaDecelerazione: 60
   oggettoTrigger: {fileID: 2288236651822864539, guid: d1b6ccc8fe84b0048bfb1b7c6a9990d5, type: 3}
-  currentMatchPlayer2R: {fileID: 0}
   parryMomentL: 0
 --- !u!50 &-5305534673879751743
 Rigidbody2D:

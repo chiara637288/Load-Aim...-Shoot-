@@ -9,6 +9,8 @@ TagManager:
   - RallentatoreR
   - Player1L
   - Player2R
+  - BulletL
+  - BulletR
   layers:
   - Default
   - TransparentFX

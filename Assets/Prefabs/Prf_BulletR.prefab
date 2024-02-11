@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4423126051060721953}
   m_Layer: 0
   m_Name: Prf_BulletR
-  m_TagString: Untagged
+  m_TagString: BulletR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

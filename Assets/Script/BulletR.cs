@@ -8,7 +8,6 @@ public class BulletR : MonoBehaviour
     public float velocitaMinima = 1f; // Velocità minima consentita
     public float velocitaDecelerazione = 2f; // Fattore di decelerazione graduale
     public GameObject oggettoTrigger; // Oggetto con Collider2D per il trigger
-    public Score currentMatchPlayer1L; 
 
     private Rigidbody2D rb;
     private bool inTrigger = false;
@@ -27,9 +26,6 @@ public class BulletR : MonoBehaviour
 
     private void Update()
     {
-
-        int CurrentMatchPlayer1L = currentMatchPlayer1L.currentMatchPlayer1LResult;
-
         // Se il proiettile è nel trigger, inizia il rallentamento graduale
         if (inTrigger)
         {
@@ -51,11 +47,6 @@ public class BulletR : MonoBehaviour
         if (other.gameObject.CompareTag("RallentatoreR") )
         {
             inTrigger = true;
-        }
-
-        if (other.gameObject.CompareTag("Player1L"))
-        {
-            currentMatchPlayer1L.currentMatchPlayer1LResult = 0;
         }
     }
 
