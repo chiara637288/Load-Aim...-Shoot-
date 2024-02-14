@@ -14,7 +14,7 @@ public class Score : MonoBehaviour
     public GameObject HeartPlayer22;
     public GameObject HeartPlayer23;
 
-    void ScoreControl() //lo score control viene chiamato se entrambi muoiono, se entrambi parryano, se scade il tempo (il tempo dovrebbe controllare da solo che non ci sono proiettili in movimento), e se uno dei due muore senza aver sparato 
+    public void ScoreControl() //lo score control viene chiamato se entrambi muoiono, se entrambi parryano, se scade il tempo (il tempo dovrebbe controllare da solo che non ci sono proiettili in movimento), e se uno dei due muore senza aver sparato 
     {
         if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 0)
         {

@@ -42,7 +42,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8558177096698333003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -175,5 +175,4 @@ MonoBehaviour:
   velocitaMinima: 0.1
   velocitaDecelerazione: 60
   oggettoTrigger: {fileID: 7704572664198947889, guid: acbee482a56ca59489ad71905118add9, type: 3}
-  currentMatchPlayer1L: {fileID: 0}
   parryMomentR: 0

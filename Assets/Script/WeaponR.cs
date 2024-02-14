@@ -39,8 +39,8 @@ public class WeaponR : MonoBehaviour
         randomValueParry = GetRandomValueParry(parryArray);
         Debug.Log("Randomly picked value parry : " + randomValueParry);
 
-        Renderer bulletRenderer = bulletPrefab.GetComponent<Renderer>();
-        bulletRenderer.enabled = true;
+       // Renderer bulletRenderer = bulletPrefab.GetComponent<Renderer>();
+       // bulletRenderer.enabled = true;
     }
 
     void Update()
@@ -249,9 +249,9 @@ public class WeaponR : MonoBehaviour
                 break;
         }
 
-        Renderer bulletRenderer = bulletPrefab.GetComponent<Renderer>();
+        //Renderer bulletRenderer = bulletPrefab.GetComponent<Renderer>();
 
-        bulletRenderer.enabled = false;
+        //bulletRenderer.enabled = false;
     }
 
         string GetRandomValue(string[] myArray)

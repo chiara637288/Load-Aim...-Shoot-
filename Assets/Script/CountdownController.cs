@@ -22,8 +22,11 @@ public class CountdownController : MonoBehaviour
     public bool timeToshootL = false;
     public bool timeToshootR = false;
     public bool timeOver = false;
+    private bool previousParryL = false;
+    private bool previousParryR = false;
     private BulletL bulletL;
     private BulletR bulletR;
+    public Score Score;
 
 
     private void Start()
@@ -35,6 +38,18 @@ public class CountdownController : MonoBehaviour
     {
         bulletL = FindObjectOfType<BulletL>();
         bulletR = FindObjectOfType<BulletR>();
+
+        /*if (bulletL != null && bulletR != null)
+        {
+            if (!previousParryL && !previousParryR && bulletL.parryMomentL && bulletR.parryMomentR)
+            {
+                StopCountdown();
+            }
+
+            previousParryL = bulletL.parryMomentL;
+            previousParryR = bulletR.parryMomentR;
+
+        }*/
     }
 
     IEnumerator CountdownToStart()
@@ -65,23 +80,6 @@ public class CountdownController : MonoBehaviour
         timeToshootL = true;
         timeToshootR = true;
         
-       /*if (bulletL.parryMomentL == true && bulletR.parryMomentR == true)
-        {
-            countdownShoot.SetActive(false);
-            countdown5.SetActive(false);
-            countdown4.SetActive(false);
-            countdown3.SetActive(false);
-            countdown2.SetActive(false); 
-            countdown1.SetActive(false);
-            countdownTimesUp.SetActive(false);
-
-
-            timeToshootL = false;
-            timeToshootR = false;
-            timeOver = true;
-        }
-       else
-        {*/
             yield return new WaitForSeconds(0.4f);
             countdownShoot.SetActive(false);
 
@@ -107,10 +105,31 @@ public class CountdownController : MonoBehaviour
             yield return new WaitForSeconds(1f);
             countdown1.SetActive(false);
             countdownTimesUp.SetActive(true);
+            Score.ScoreControl();
 
             timeToshootL = false;
             timeToshootR = false;
             timeOver = true;
-       // }
     }
+
+    private void StopCountdown()
+    {
+        
+            StopCoroutine(CountdownToStart());
+
+            countdownShoot.SetActive(false);
+            countdown5.SetActive(false);
+            countdown4.SetActive(false);
+            countdown3.SetActive(false);
+            countdown2.SetActive(false);
+            countdown1.SetActive(false);
+            countdownTimesUp.SetActive(false);
+
+
+            timeToshootL = false;
+            timeToshootR = false;
+            timeOver = true;
+        
+    }
+
 }

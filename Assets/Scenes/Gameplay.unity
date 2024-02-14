@@ -4167,6 +4167,7 @@ MonoBehaviour:
   timeToshootL: 0
   timeToshootR: 0
   timeOver: 0
+  Score: {fileID: 1354842610}
 --- !u!4 &1477602293
 Transform:
   m_ObjectHideFlags: 0
