@@ -39,6 +39,11 @@ public class WeaponL : MonoBehaviour
 
         randomValueParryL = GetRandomValueParry(parryArrayL);
         Debug.Log("Randomly picked value parryL : " + randomValueParryL);
+
+        Renderer bulletRenderer = bulletPrefab.GetComponent<Renderer>();
+
+        bulletRenderer.enabled = true;
+
     }
 
     void Update()
@@ -142,31 +147,31 @@ public class WeaponL : MonoBehaviour
 
     }
 
-        void DisplayButton(string value, bool isVisible)
+    void DisplayButton(string value, bool isVisible)
+    {
+        // Display the corresponding button based on the input value
+        switch (value)
         {
-            // Display the corresponding button based on the input value
-            switch (value)
-            {
-                case "Q":
-                    ButtonQ.SetActive(true);
-                    break;
-                case "W":
-                    ButtonW.SetActive(true);
-                    break;
-                case "E":
-                    ButtonE.SetActive(true);
-                    break;
-                case "R":
-                    ButtonR.SetActive(true);
-                    break;
-                case "T":
-                    ButtonT.SetActive(true);
-                    break;
-                case "Y":
-                    ButtonY.SetActive(true);
-                    break;
-            }
+            case "Q":
+                ButtonQ.SetActive(true);
+                break;
+            case "W":
+                ButtonW.SetActive(true);
+                break;
+            case "E":
+                ButtonE.SetActive(true);
+                break;
+            case "R":
+                ButtonR.SetActive(true);
+                break;
+            case "T":
+                ButtonT.SetActive(true);
+                break;
+            case "Y":
+                ButtonY.SetActive(true);
+                break;
         }
+    }
 
     void DisplayButtonParry(string value2, bool isVisible)
     {
@@ -193,70 +198,73 @@ public class WeaponL : MonoBehaviour
                 break;
         }
     }
-            void Shoot()
-            {
-                // Shooting spawn
-                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    void Shoot()
+    {
+        // Shooting spawn
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
-                // Hide the button after shooting
-                switch (randomValue)
-                {
-                    case "Q":
-                        ButtonQ.SetActive(false);
-                        break;
-                    case "W":
-                        ButtonW.SetActive(false);
-                        break;
-                    case "E":
-                        ButtonE.SetActive(false);
-                        break;
-                    case "R":
-                        ButtonR.SetActive(false);
-                        break;
-                    case "T":
-                        ButtonT.SetActive(false);
-                        break;
-                    case "Y":
-                        ButtonY.SetActive(false);
-                        break;
-                }
+        // Hide the button after shooting
+        switch (randomValue)
+        {
+            case "Q":
+                ButtonQ.SetActive(false);
+                break;
+            case "W":
+                ButtonW.SetActive(false);
+                break;
+            case "E":
+                ButtonE.SetActive(false);
+                break;
+            case "R":
+                ButtonR.SetActive(false);
+                break;
+            case "T":
+                ButtonT.SetActive(false);
+                break;
+            case "Y":
+                ButtonY.SetActive(false);
+                break;
+        }
 
-            }
-             void Parry()
-            {
-                switch (randomValueParryL)
-                {
-                    case "A":
-                        ButtonA.SetActive(false);
-                        break;
-                    case "S":
-                        ButtonS.SetActive(false);
-                        break;
-                    case "D":
-                        ButtonD.SetActive(false);
-                        break;
-                    case "F":
-                        ButtonF.SetActive(false);
-                        break;
-                    case "Z":
-                        ButtonZ.SetActive(false);
-                        break;
-                    case "X":
-                        ButtonX.SetActive(false);
-                        break;
-                }
-            }
+    }
+    void Parry()
+    {
+        switch (randomValueParryL)
+        {
+            case "A":
+                ButtonA.SetActive(false);
+                break;
+            case "S":
+                ButtonS.SetActive(false);
+                break;
+            case "D":
+                ButtonD.SetActive(false);
+                break;
+            case "F":
+                ButtonF.SetActive(false);
+                break;
+            case "Z":
+                ButtonZ.SetActive(false);
+                break;
+            case "X":
+                ButtonX.SetActive(false);
+                break;
+        }
+
+        Renderer bulletRenderer = bulletPrefab.GetComponent<Renderer>();
+
+        bulletRenderer.enabled = false;
+    }
 
 
     string GetRandomValue(string[] myArray)
-            {
-                int randomIndex = Random.Range(0, myArray.Length);
-                return myArray[randomIndex];
-            }
-            string GetRandomValueParry(string[] parryArrayL)
-            {
-                int randomIndexParry = Random.Range(0, parryArrayL.Length);
-                return parryArrayL[randomIndexParry];
-            }
-        
+    {
+        int randomIndex = Random.Range(0, myArray.Length);
+        return myArray[randomIndex];
+    }
+    string GetRandomValueParry(string[] parryArrayL)
+    {
+        int randomIndexParry = Random.Range(0, parryArrayL.Length);
+        return parryArrayL[randomIndexParry];
+    }
 }

@@ -3949,8 +3949,6 @@ MonoBehaviour:
   currentLevel: 0
   currentMatchPlayer1LResult: 2
   currentMatchPlayer2RResult: 2
-  currentHeartsPlayer1: 3
-  currentHeartsPlayer2: 3
   HeartPlayer11: {fileID: 2078378463}
   HeartPlayer12: {fileID: 1399457208}
   HeartPlayer13: {fileID: 1440077939}
@@ -6005,6 +6003,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1016119982}
     - target: {fileID: 8347839700279669743, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
+      propertyPath: bulletPrefabR
+      value: 
+      objectReference: {fileID: 1721957232172429042, guid: 978414012ff03664492016523765d5c1, type: 3}
+    - target: {fileID: 8347839700279669743, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
       propertyPath: CountdownControllerIstance
       value: 
       objectReference: {fileID: 1477602292}
@@ -6084,6 +6086,10 @@ PrefabInstance:
       propertyPath: ButtonZ
       value: 
       objectReference: {fileID: 687407761}
+    - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+      propertyPath: bulletPrefabL
+      value: 
+      objectReference: {fileID: 9135184541824165562, guid: f82aa331ec64e9b47bdc0be43f953db3, type: 3}
     - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
       propertyPath: CountdownControllerIstance
       value: 
