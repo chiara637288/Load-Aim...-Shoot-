@@ -68,7 +68,7 @@ public class Score : MonoBehaviour
             }
         }
 
-        if (currentMatchPlayer1LResult == 2 && currentMatchPlayer2RResult == 2)
+        if (currentMatchPlayer1LResult == 2 && currentMatchPlayer2RResult == 2) // questo evento forse è meglio toglierlo, conviene fare che se nessuno ha sparato il conto alla roveglia non parte
         {
             //nulla, vi siete dimenticati di sparate?
         }

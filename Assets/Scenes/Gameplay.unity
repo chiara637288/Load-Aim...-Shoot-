@@ -6040,6 +6040,10 @@ PrefabInstance:
       value: Player 1 L
       objectReference: {fileID: 0}
     - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+      propertyPath: Score
+      value: 
+      objectReference: {fileID: 1354842610}
+    - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
       propertyPath: ButtonA
       value: 
       objectReference: {fileID: 320613261}

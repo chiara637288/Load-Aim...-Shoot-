@@ -24,6 +24,7 @@ public class WeaponL : MonoBehaviour
     public CountdownController CountdownControllerIstance;
     public CountdownController CountdownControllerIstance1;
     public CountdownController CountdownControllerIstanceTimeOver;
+    public Score Score;
     private BulletR bulletR;
 
     string[] myArray = { "Q", "W", "E", "R", "T", "Y" };
@@ -52,6 +53,7 @@ public class WeaponL : MonoBehaviour
         bool isTimeToShootL = CountdownControllerIstance.timeToshootL;
         bool isTimeToShootR = CountdownControllerIstance1.timeToshootR;
         bool isTimeOver = CountdownControllerIstanceTimeOver.timeOver;
+        //int currentMatchPlayer1LResult = Score.currentMatchPlayer1LResult;
 
         if (isTimeToShootL)
         {
@@ -229,8 +231,11 @@ public class WeaponL : MonoBehaviour
     }
     void Parry()
     {
+        Score.currentMatchPlayer1LResult = 1;
+
         switch (randomValueParryL)
         {
+
             case "A":
                 ButtonA.SetActive(false);
                 break;
@@ -250,10 +255,10 @@ public class WeaponL : MonoBehaviour
                 ButtonX.SetActive(false);
                 break;
         }
-
+        
       //  Renderer bulletRenderer = bulletPrefab.GetComponent<Renderer>();
 
-      //  bulletRenderer.enabled = false;
+        //  bulletRenderer.enabled = false;
     }
 
 
