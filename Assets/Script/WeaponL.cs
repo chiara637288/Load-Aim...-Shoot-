@@ -258,8 +258,7 @@ public class WeaponL : MonoBehaviour
         }
         
           SpriteRenderer bulletRenderer = FindObjectOfType<BulletR>().GetComponent<SpriteRenderer>();
-
-        bulletRenderer.enabled = false;
+          bulletRenderer.enabled = false;
     }
 
 
