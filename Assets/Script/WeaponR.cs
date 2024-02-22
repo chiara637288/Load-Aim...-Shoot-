@@ -7,7 +7,6 @@ public class WeaponR : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public GameObject bulletPrefabEnemy;
     public GameObject ButtonP; // Elencare i bottoni che quando accesi mostrano al giocatore quale pulsante premere.
     public GameObject ButtonO;
     public GameObject ButtonI;
@@ -40,8 +39,6 @@ public class WeaponR : MonoBehaviour
         randomValueParry = GetRandomValueParry(parryArray);
         Debug.Log("Randomly picked value parry : " + randomValueParry);
 
-       // Renderer bulletRenderer = bulletPrefab.GetComponent<Renderer>();
-       // bulletRenderer.enabled = true;
     }
 
     void Update()
@@ -250,8 +247,8 @@ public class WeaponR : MonoBehaviour
                 break;
         }
 
-        SpriteRenderer bulletRenderer = bulletPrefabEnemy.GetComponent<SpriteRenderer>();
 
+        SpriteRenderer bulletRenderer = FindObjectOfType<BulletL>().GetComponent<SpriteRenderer>();
         bulletRenderer.enabled = false;
     }
 

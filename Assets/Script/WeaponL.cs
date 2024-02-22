@@ -257,9 +257,9 @@ public class WeaponL : MonoBehaviour
                 break;
         }
         
-          SpriteRenderer bulletRenderer = bulletPrefabEnemy.GetComponent<SpriteRenderer>();
+          SpriteRenderer bulletRenderer = FindObjectOfType<BulletR>().GetComponent<SpriteRenderer>();
 
-          bulletRenderer.enabled = false;
+        bulletRenderer.enabled = false;
     }
 
 

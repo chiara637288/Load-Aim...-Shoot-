@@ -45,7 +45,6 @@ public class CountdownController : MonoBehaviour
             {
                 StopCountdown();
             }
-
         }
     }
 
@@ -123,7 +122,6 @@ public class CountdownController : MonoBehaviour
             countdownTimesUp.SetActive(false);
 
             Invoke("EndRoundStuff", 2f);
-        
     }
 
     private void EndRoundStuff()
@@ -132,5 +130,4 @@ public class CountdownController : MonoBehaviour
         timeToshootR = false;
         timeOver = true;
     }
-
 }
