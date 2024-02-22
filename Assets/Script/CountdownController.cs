@@ -39,17 +39,14 @@ public class CountdownController : MonoBehaviour
         bulletL = FindObjectOfType<BulletL>();
         bulletR = FindObjectOfType<BulletR>();
 
-        /*if (bulletL != null && bulletR != null)
+        if (bulletL != null && bulletR != null)
         {
-            if (!previousParryL && !previousParryR && bulletL.parryMomentL && bulletR.parryMomentR)
+            if (bulletL.parryMomentL == true && bulletR.parryMomentR == true)
             {
                 StopCountdown();
             }
 
-            previousParryL = bulletL.parryMomentL;
-            previousParryR = bulletR.parryMomentR;
-
-        }*/
+        }
     }
 
     IEnumerator CountdownToStart()
@@ -115,7 +112,7 @@ public class CountdownController : MonoBehaviour
     private void StopCountdown()
     {
         
-            StopCoroutine(CountdownToStart());
+            StopAllCoroutines();
 
             countdownShoot.SetActive(false);
             countdown5.SetActive(false);
