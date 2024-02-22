@@ -7,7 +7,7 @@ public class WeaponL : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public GameObject bulletPrefabEnemy;
+    public ParticleSystem BulletR_ps;
     public GameObject ButtonQ; // Elencare i bottoni che quando accesi mostrano al giocatore quale pulsante premere.
     public GameObject ButtonW;
     public GameObject ButtonE;
@@ -259,6 +259,8 @@ public class WeaponL : MonoBehaviour
         
           SpriteRenderer bulletRenderer = FindObjectOfType<BulletR>().GetComponent<SpriteRenderer>();
           bulletRenderer.enabled = false;
+
+          BulletR_ps.Play();
     }
 
 
