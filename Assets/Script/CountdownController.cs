@@ -122,11 +122,15 @@ public class CountdownController : MonoBehaviour
             countdown1.SetActive(false);
             countdownTimesUp.SetActive(false);
 
-
-            timeToshootL = false;
-            timeToshootR = false;
-            timeOver = true;
+            Invoke("EndRoundStuff", 2f);
         
+    }
+
+    private void EndRoundStuff()
+    {
+        timeToshootL = false;
+        timeToshootR = false;
+        timeOver = true;
     }
 
 }
