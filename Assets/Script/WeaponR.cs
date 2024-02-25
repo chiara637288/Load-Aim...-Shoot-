@@ -24,6 +24,7 @@ public class WeaponR : MonoBehaviour
     public CountdownController CountdownControllerIstance;
     public CountdownController CountdownControllerIstance1; 
     public CountdownController CountdownControllerIstanceTimeOver;
+    public Score Score;
     private BulletL bulletL;
 
     string[] myArray = { "P", "O", "I", "U", "L", "K" };
@@ -140,7 +141,6 @@ public class WeaponR : MonoBehaviour
             ButtonJ.SetActive(false);
             ButtonH.SetActive(false);
         }
-
     }
 
    void DisplayButton(string value, bool isVisible) 
@@ -166,7 +166,6 @@ public class WeaponR : MonoBehaviour
             case "K":
                 ButtonK.SetActive(true);
                 break;
-
         }
     }
     void DisplayButtonParry(string value2, bool isVisible)
@@ -226,6 +225,8 @@ public class WeaponR : MonoBehaviour
 
     void Parry()
     {
+        Score.currentMatchPlayer2RResult = 1;
+
         switch (randomValueParry)
         {
             case "M":

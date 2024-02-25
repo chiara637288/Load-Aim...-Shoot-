@@ -101,7 +101,6 @@ public class CountdownController : MonoBehaviour
             yield return new WaitForSeconds(1f);
             countdown1.SetActive(false);
             countdownTimesUp.SetActive(true);
-            Score.ScoreControl();
 
             timeToshootL = false;
             timeToshootR = false;

@@ -5,8 +5,9 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public int currentLevel = 0;                // ricordarsi di controllare il caso in cui il current level va sotto a 0
-    public int currentMatchPlayer1LResult = 2;
-    public int currentMatchPlayer2RResult = 2;   // 2 è quando non si spara, 0 è quando si è morti, 1 quando si è vivi 
+    public int currentMatchPlayer1LResult = 3;
+    public int currentMatchPlayer2RResult = 3;   // 3 è la base, 2 è quando non si spara, 0 è quando si è morti, 1 quando si ha parryato 
+    private int roundBothDied = 0;
     public GameObject HeartPlayer11;
     public GameObject HeartPlayer12;
     public GameObject HeartPlayer13;
@@ -14,17 +15,20 @@ public class Score : MonoBehaviour
     public GameObject HeartPlayer22;
     public GameObject HeartPlayer23;
 
-    public void ScoreControl() //lo score control viene chiamato se entrambi muoiono, se entrambi parryano, se scade il tempo (il tempo dovrebbe controllare da solo che non ci sono proiettili in movimento), e se uno dei due muore senza aver sparato 
+    public void Update()    //non può controllare costantemente, dovrebbe attivarsi solo dopo x tempo (magari sopo la fine delle animazioni di morti o di parry)
     {
-        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 0)
+        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 0)     //entrambi hanno perso e quindi non perdono cuori
         {
-            //entrambi hanno perso e quindi non perdono cuori
-            //se entrambi perdono per 2 volte di fila currentLevel = currentLevel--;
+            roundBothDied = roundBothDied++;
+            if (roundBothDied == 2)
+            {
+                currentLevel = currentLevel--;
+                roundBothDied = 0;
+            }
         }
 
         if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1) //e se uno fa 1 e l'altro fa 2?
         {
-            //entrambi non perdono un cuore
             currentLevel = currentLevel++;
         }
 
@@ -68,18 +72,18 @@ public class Score : MonoBehaviour
             }
         }
 
-        if (currentMatchPlayer1LResult == 2 && currentMatchPlayer2RResult == 2) // questo evento forse è meglio toglierlo, conviene fare che se nessuno ha sparato il conto alla roveglia non parte
+        if (currentMatchPlayer1LResult == 2 || currentMatchPlayer2RResult == 2) // questo evento forse è meglio toglierlo, conviene fare che se nessuno ha sparato il conto alla roveglia non parte
         {
             //nulla, vi siete dimenticati di sparate?
         }
     }
 
-    void DeathPlayer1()
+   public void DeathPlayer1()
     {
 
     }
 
-    void DeathPlayer2()
+   public void DeathPlayer2()
     {
 
     }

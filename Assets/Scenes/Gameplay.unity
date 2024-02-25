@@ -15728,6 +15728,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8347839700279669743, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
+      propertyPath: Score
+      value: 
+      objectReference: {fileID: 1354842610}
+    - target: {fileID: 8347839700279669743, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
       propertyPath: ButtonB
       value: 
       objectReference: {fileID: 1866693453}
