@@ -232,8 +232,6 @@ public class WeaponL : MonoBehaviour
     }
     void Parry()
     {
-        Score.currentMatchPlayer1LResult = 1;
-
         switch (randomValueParryL)
         {
 
@@ -261,6 +259,7 @@ public class WeaponL : MonoBehaviour
           bulletRenderer.enabled = false;
 
           BulletR_ps.Play();
+          Score.currentMatchPlayer1LResult = 1;
     }
 
 

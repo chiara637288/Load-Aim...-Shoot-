@@ -225,8 +225,6 @@ public class WeaponR : MonoBehaviour
 
     void Parry()
     {
-        Score.currentMatchPlayer2RResult = 1;
-
         switch (randomValueParry)
         {
             case "M":
@@ -254,13 +252,13 @@ public class WeaponR : MonoBehaviour
         bulletRenderer.enabled = false;
 
         BulletL_ps.Play();
+        Score.currentMatchPlayer2RResult = 1;
     }
 
         string GetRandomValue(string[] myArray)
     {
         int randomIndex = Random.Range(0, myArray.Length);
         return myArray[randomIndex];
-
     }
 
     string GetRandomValueParry(string[] parryArray)
