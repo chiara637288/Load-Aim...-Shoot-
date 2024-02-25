@@ -48,6 +48,11 @@ public class BulletR : MonoBehaviour
         {
             inTrigger = true;
         }
+       
+        if (other.gameObject.CompareTag("BulletKiller"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

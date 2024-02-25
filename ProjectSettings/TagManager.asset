@@ -11,6 +11,7 @@ TagManager:
   - Player2R
   - BulletL
   - BulletR
+  - BulletKiller
   layers:
   - Default
   - TransparentFX
