@@ -57,6 +57,7 @@ public class BulletL : MonoBehaviour
         if (other.gameObject.CompareTag("RallentatoreL"))
         {
             inTrigger = false;
+            parryMomentL = false;
         }
     }
 }

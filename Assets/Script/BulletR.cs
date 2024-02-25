@@ -56,6 +56,7 @@ public class BulletR : MonoBehaviour
         if (other.gameObject.CompareTag("RallentatoreR"))
         {
             inTrigger = false;
+            parryMomentR = false;
         }
     }
 }

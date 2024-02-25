@@ -262,7 +262,6 @@ public class WeaponL : MonoBehaviour
           Score.currentMatchPlayer1LResult = 1;
     }
 
-
     string GetRandomValue(string[] myArray)
     {
         int randomIndex = Random.Range(0, myArray.Length);
