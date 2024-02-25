@@ -12,6 +12,7 @@ public class BulletR : MonoBehaviour
     private Rigidbody2D rb;
     private bool inTrigger = false;
     public bool parryMomentR = false;
+    public Score Score;
 
     private void Start()
     {
@@ -53,15 +54,20 @@ public class BulletR : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (other.gameObject.CompareTag("TriggerSconfitta") && !GetComponent<SpriteRenderer>().enabled)
+        {
+            Score.currentMatchPlayer1LResult = 0;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         // Verifica se l'oggetto trigger è uguale all'oggetto desiderato
-        if (other.gameObject.CompareTag("RallentatoreR"))
+        if (other.gameObject.CompareTag("RallentatoreR")) 
         {
             inTrigger = false;
-            parryMomentR = false;
+            parryMomentR = false; // non è quando esce dal rallentatore ma quando tocca il collider del PG
         }
     }
 }

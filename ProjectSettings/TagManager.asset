@@ -12,6 +12,7 @@ TagManager:
   - BulletL
   - BulletR
   - BulletKiller
+  - TriggerSconfitta
   layers:
   - Default
   - TransparentFX

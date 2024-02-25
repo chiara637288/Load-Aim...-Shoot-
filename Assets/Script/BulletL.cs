@@ -12,6 +12,7 @@ public class BulletL : MonoBehaviour
     private Rigidbody2D rb;
     private bool inTrigger = false;
     public bool parryMomentL = false;
+    public Score Score;
 
     private void Start()
     {
@@ -53,6 +54,11 @@ public class BulletL : MonoBehaviour
         if (other.gameObject.CompareTag("BulletKiller"))
         {
             Destroy(gameObject);
+        }
+
+        if (other.gameObject.CompareTag("TriggerSconfitta") && !GetComponent<SpriteRenderer>().enabled)
+        {
+            Score.currentMatchPlayer2RResult = 0;
         }
     }
 
