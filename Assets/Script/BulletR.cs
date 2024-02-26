@@ -16,6 +16,8 @@ public class BulletR : MonoBehaviour
 
     private void Start()
     {
+        Score = FindObjectOfType<Score>();
+
         // Inizializza il riferimento al Rigidbody2D
         rb = GetComponent<Rigidbody2D>();
 
@@ -49,15 +51,15 @@ public class BulletR : MonoBehaviour
         {
             inTrigger = true;
         }
-       
+
+        if (other.gameObject.CompareTag("TriggerSconfitta") && GetComponent<SpriteRenderer>().enabled)
+        {
+            Score.currentMatchPlayer1LResult = 0;
+        }
+
         if (other.gameObject.CompareTag("BulletKiller"))
         {
             Destroy(gameObject);
-        }
-
-        if (other.gameObject.CompareTag("TriggerSconfitta") && !GetComponent<SpriteRenderer>().enabled)
-        {
-            Score.currentMatchPlayer1LResult = 0;
         }
     }
 

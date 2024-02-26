@@ -15,9 +15,5 @@ public class TriggerP1L : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.gameObject.CompareTag("BulletR"))
-        {
-            currentMatchPlayer1L.currentMatchPlayer1LResult = 0;
-        }
     }
 }

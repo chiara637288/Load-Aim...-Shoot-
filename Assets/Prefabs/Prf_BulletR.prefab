@@ -112,7 +112,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &6437010715179323614
 BoxCollider2D:
@@ -176,3 +176,4 @@ MonoBehaviour:
   velocitaDecelerazione: 60
   oggettoTrigger: {fileID: 7704572664198947889, guid: acbee482a56ca59489ad71905118add9, type: 3}
   parryMomentR: 0
+  Score: {fileID: 0}

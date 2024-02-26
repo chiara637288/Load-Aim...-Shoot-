@@ -52,6 +52,7 @@ MonoBehaviour:
   velocitaDecelerazione: 60
   oggettoTrigger: {fileID: 2288236651822864539, guid: d1b6ccc8fe84b0048bfb1b7c6a9990d5, type: 3}
   parryMomentL: 0
+  Score: {fileID: 0}
 --- !u!50 &-5305534673879751743
 Rigidbody2D:
   serializedVersion: 4
@@ -77,7 +78,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &6437010715179323614
 BoxCollider2D:
