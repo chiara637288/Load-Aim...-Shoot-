@@ -50,6 +50,8 @@ public class CountdownController : MonoBehaviour
 
     IEnumerator CountdownToStart()
     {
+            Score.cuorePerso = false;
+
         if (countdownTime == 3)
         {
             countdownLoad.SetActive(true);

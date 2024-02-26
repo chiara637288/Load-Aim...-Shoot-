@@ -56,7 +56,6 @@ public class BulletL : MonoBehaviour
         if (other.gameObject.CompareTag("TriggerSconfitta") && GetComponent<SpriteRenderer>().enabled)
         {
             Score.currentMatchPlayer2RResult = 0;
-            print("Bastardo");
         }
 
         if (other.gameObject.CompareTag("BulletKiller"))

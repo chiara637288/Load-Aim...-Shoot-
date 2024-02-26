@@ -8,6 +8,7 @@ public class Score : MonoBehaviour
     public int currentMatchPlayer1LResult = 3;
     public int currentMatchPlayer2RResult = 3;   // 3 è la base, 2 è quando non si spara, 0 è quando si è morti, 1 quando si ha parryato 
     private int roundBothDied = 0;
+    public bool cuorePerso = false;
     public GameObject HeartPlayer11;
     public GameObject HeartPlayer12;
     public GameObject HeartPlayer13;
@@ -15,9 +16,9 @@ public class Score : MonoBehaviour
     public GameObject HeartPlayer22;
     public GameObject HeartPlayer23;
 
-    public void Update()    //non può controllare costantemente, dovrebbe attivarsi solo dopo x tempo (magari sopo la fine delle animazioni di morti o di parry)
+    public void Update()    //non può controllare costantemente, dovrebbe attivarsi solo dopo x tempo (magari sopo la fine delle animazioni di morti o di parry) //Se uno spara e l'artro muore subito non c'è nessuna condizione che controlli sta cosa 
     {
-        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 0)     //entrambi hanno perso e quindi non perdono cuori
+        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 0 && cuorePerso == false)     //entrambi hanno perso e quindi non perdono cuori
         {
             roundBothDied = roundBothDied++;
             if (roundBothDied == 2)
@@ -27,48 +28,48 @@ public class Score : MonoBehaviour
             }
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1) //e se uno fa 1 e l'altro fa 2?
+        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1 && cuorePerso == false) //e se uno fa 1 e l'altro fa 2?
         {
             currentLevel = currentLevel++;
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0) //player 1 ha vinto e player 2 ha perso
+        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0 && cuorePerso == false) //player 1 ha vinto e player 2 ha perso
         {
             if (HeartPlayer21.activeSelf)
             {
                 HeartPlayer21.SetActive(false);
+                cuorePerso = true;
+            }
+            else if (HeartPlayer22.activeSelf)
+            {
+                HeartPlayer22.SetActive(false);
+                cuorePerso = true;
             }
             else
             {
-                if (HeartPlayer22.activeSelf)
-                {
-                    HeartPlayer22.SetActive(false);
-                }
-                else
-                {
-                    HeartPlayer23.SetActive(false);
-                    DeathPlayer2();
-                }
+                HeartPlayer23.SetActive(false);
+                cuorePerso = true;
+                DeathPlayer2();
             }
         }
 
-        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1) // Player1 ha perso e player 2 ha vinto
+        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1 && cuorePerso == false) // Player1 ha perso e player 2 ha vinto
         {
             if (HeartPlayer13.activeSelf)
             {
                 HeartPlayer13.SetActive(false);
+                cuorePerso = true;
+            }
+            else if (HeartPlayer12.activeSelf)
+            {
+                HeartPlayer12.SetActive(false);
+                cuorePerso = true;
             }
             else
             {
-                if (HeartPlayer12.activeSelf)
-                {
-                    HeartPlayer12.SetActive(false);
-                }
-                else
-                {
-                    HeartPlayer11.SetActive(false);
-                    DeathPlayer1();
-                }
+                HeartPlayer11.SetActive(false);
+                cuorePerso = true;
+                DeathPlayer1();
             }
         }
 
