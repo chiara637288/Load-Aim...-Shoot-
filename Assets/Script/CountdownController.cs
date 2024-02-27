@@ -11,6 +11,9 @@ public class CountdownController : MonoBehaviour
     public GameObject countdownLoad; //TextMeshProUGUI Serve per il testo di TextMeshPro
     public GameObject countdownAim;
     public GameObject countdownShoot;
+    public GameObject LoadText;
+    public GameObject AimText;
+    public GameObject ShootText;
     public GameObject countdown5;
     public GameObject countdown4;
     public GameObject countdown3;
@@ -55,8 +58,7 @@ public class CountdownController : MonoBehaviour
         if (countdownTime == 3)
         {
             countdownLoad.SetActive(true);
-            countdownAim.SetActive(false);
-            countdownShoot.SetActive(false);
+            LoadText.SetActive(true);
 
             yield return new WaitForSeconds(1f);
             countdownTime--;
@@ -65,21 +67,25 @@ public class CountdownController : MonoBehaviour
         if (countdownTime == 2)
         {
             countdownLoad.SetActive(false);
+            LoadText.SetActive(false);
             countdownAim.SetActive(true);
-            countdownShoot.SetActive(false);
+            AimText.SetActive(true);
 
             float wait_time = Random.Range(minRandomCountDownShoot, maxRandomCountDownShoot);
             yield return new WaitForSeconds(wait_time);
         }
 
         countdownAim.SetActive(false);
+        AimText.SetActive(false);
         countdownShoot.SetActive(true);
+        ShootText.SetActive(true);
 
         timeToshootL = true;
         timeToshootR = true;
         
             yield return new WaitForSeconds(0.4f);
             countdownShoot.SetActive(false);
+            ShootText.SetActive(false);
 
             yield return new WaitForSeconds(5f);  
             countdown5.SetActive(true);
