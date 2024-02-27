@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b0e24686feb411c47b2676eeb8b42ddb
+guid: 938c6c725c79821468c1d4db71271ada
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _AttackNoMovement 1_0
+      name: Player 1 Death-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 120
-        height: 80
+        width: 24
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb16acfe94e81f4438539fa70fd3f17c
-      internalID: 1466250729
+      spriteID: 83d1ea3cb7595e849b302ae14bd56111
+      internalID: -120737326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackNoMovement 1_1
+      name: Player 1 Death-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4765b7e666647a4bbc8c712dedb8629
+      internalID: 1871271541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player 1 Death-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4648ecaa2fc63ff42a90255417c19b7b
+      internalID: 2127909101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player 1 Death-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924b0979d8d41c046b2b8cc04cf77757
+      internalID: 442953458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player 1 Death-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45dde4efba1105141ae16ac3fdb0722e
+      internalID: -1066922299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player 1 Death-Sheet_5
       rect:
         serializedVersion: 2
         x: 120
         y: 0
-        width: 120
-        height: 80
+        width: 24
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ecfc4c23a4dec84986821f4de00c6f3
-      internalID: -823224069
+      spriteID: 4da1ec4a26679674d8c005ea8b306020
+      internalID: 587538111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackNoMovement 1_2
+      name: Player 1 Death-Sheet_6
       rect:
         serializedVersion: 2
-        x: 240
+        x: 144
         y: 0
-        width: 120
-        height: 80
+        width: 24
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,29 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0954541e9d7d1e41b0e93fc05a22727
-      internalID: -524760651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _AttackNoMovement 1_3
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 0
-        width: 120
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fdacf9cf12a2d5429151ea616880d78
-      internalID: 449287187
+      spriteID: 4851cff0fe185a54f8e33e8fa6af3bc1
+      internalID: 267108410
       vertices: []
       indices: 
       edges: []
@@ -217,10 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      _AttackNoMovement 1_0: 1466250729
-      _AttackNoMovement 1_1: -823224069
-      _AttackNoMovement 1_2: -524760651
-      _AttackNoMovement 1_3: 449287187
+      Player 1 Death-Sheet_0: -120737326
+      Player 1 Death-Sheet_1: 1871271541
+      Player 1 Death-Sheet_2: 2127909101
+      Player 1 Death-Sheet_3: 442953458
+      Player 1 Death-Sheet_4: -1066922299
+      Player 1 Death-Sheet_5: 587538111
+      Player 1 Death-Sheet_6: 267108410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
