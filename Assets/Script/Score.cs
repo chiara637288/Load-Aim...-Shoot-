@@ -30,17 +30,17 @@ public class Score : MonoBehaviour
             }
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1 && cuorePerso == false) //e se uno fa 1 e l'altro fa 2?
+        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1) //e se uno fa 1 e l'altro fa 2?
         {
             currentLevel = currentLevel++;
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0 && cuorePerso == false) //player 1 ha vinto e player 2 ha perso
+        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0) //player 1 ha vinto e player 2 ha perso
         {
            DeathPlayer2();
         }
 
-        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1 && cuorePerso == false) // Player1 ha perso e player 2 ha vinto
+        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1) // Player1 ha perso e player 2 ha vinto
         {
            DeathPlayer1();
         }

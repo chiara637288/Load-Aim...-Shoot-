@@ -49,6 +49,11 @@ public class CountdownController : MonoBehaviour
                 StopCountdown();
             }
         }
+
+        if (Score.cuorePerso == true)
+        {
+            StopCountdown();
+        }
     }
 
     IEnumerator CountdownToStart()

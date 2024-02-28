@@ -132,7 +132,7 @@ public class WeaponL : MonoBehaviour
             }
         }
 
-        if (isTimeOver == true)
+        if (isTimeOver == true || Score.currentMatchPlayer1LResult == 0)
         {
             ButtonQ.SetActive(false);
             ButtonW.SetActive(false);
@@ -140,6 +140,7 @@ public class WeaponL : MonoBehaviour
             ButtonR.SetActive(false);
             ButtonT.SetActive(false);
             ButtonY.SetActive(false);
+
             ButtonA.SetActive(false);
             ButtonS.SetActive(false);
             ButtonD.SetActive(false);
@@ -147,7 +148,6 @@ public class WeaponL : MonoBehaviour
             ButtonZ.SetActive(false);
             ButtonX.SetActive(false);
         }
-
     }
 
     void DisplayButton(string value, bool isVisible)

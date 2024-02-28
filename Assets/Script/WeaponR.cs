@@ -125,7 +125,7 @@ public class WeaponR : MonoBehaviour
             }
         }
 
-        if (isTimeOver == true)
+        if (isTimeOver == true || Score.currentMatchPlayer2RResult == 0)
         {
             ButtonP.SetActive(false);
             ButtonO.SetActive(false);
