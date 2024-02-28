@@ -18,6 +18,8 @@ public class BulletL : MonoBehaviour
     {
         Score = FindObjectOfType<Score>();
 
+        Score.player1HasShoot = true;
+
         // Inizializza il riferimento al Rigidbody2D
         rb = GetComponent<Rigidbody2D>();
 
