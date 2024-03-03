@@ -2630,24 +2630,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049479916}
   m_CullTransparentMesh: 1
---- !u!1 &1054997662 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5669422846116776270, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-  m_PrefabInstance: {fileID: 5809206778870144655}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1054997666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054997662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a38dac99d8ac2324d87c87c50c73b143, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentMatchPlayer1L: {fileID: 1354842610}
 --- !u!1 &1057274793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2961,7 +2943,7 @@ GameObject:
   - component: {fileID: 1151614386}
   - component: {fileID: 1151614387}
   m_Layer: 0
-  m_Name: background_layer_3
+  m_Name: background_layer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3023,7 +3005,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 852deb359edafce4e9e80f195c769109, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a3ee24cd7ace3ff4fb6674ef9dfaf9b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9082,7 +9064,6 @@ MonoBehaviour:
   HeartPlayer21: {fileID: 2127220031}
   HeartPlayer22: {fileID: 1317602831}
   HeartPlayer23: {fileID: 505782030}
-  CountdownController: {fileID: 1477602291}
 --- !u!1 &1368914691
 GameObject:
   m_ObjectHideFlags: 0
@@ -10066,24 +10047,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643961921}
   m_CullTransparentMesh: 1
---- !u!1 &1714396495 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4116020624311017346, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-  m_PrefabInstance: {fileID: 5593754191427818268}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1714396499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714396495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06281c471ca9dce42a2f5f0af238f3c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentMatchPlayer2R: {fileID: 1354842610}
 --- !u!1 &1731917429
 GameObject:
   m_ObjectHideFlags: 0
@@ -10801,6 +10764,32 @@ RectTransform:
   m_AnchoredPosition: {x: -663.99994, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1930378903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 678185916879883003, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+  m_PrefabInstance: {fileID: 5809206778870144655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1930378906
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930378903}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3f71ad606ed42a4ebab131330833e50, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1938899684
 GameObject:
   m_ObjectHideFlags: 0
@@ -16246,6 +16235,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5907942979719843995, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
+      propertyPath: currentMatchPlayer2R
+      value: 
+      objectReference: {fileID: 1354842610}
     - target: {fileID: 6114630335275800897, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
       propertyPath: m_Name
       value: Player 2 R
@@ -16351,14 +16344,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2108759524}
     - target: {fileID: 8347839700279669743, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: bulletPrefabR
-      value: 
-      objectReference: {fileID: 1721957232172429042, guid: 978414012ff03664492016523765d5c1, type: 3}
-    - target: {fileID: 8347839700279669743, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      propertyPath: bulletPrefabEnemy
-      value: 
-      objectReference: {fileID: 8558177096698333003, guid: f82aa331ec64e9b47bdc0be43f953db3, type: 3}
-    - target: {fileID: 8347839700279669743, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
       propertyPath: CountdownControllerIstance
       value: 
       objectReference: {fileID: 1477602292}
@@ -16373,10 +16358,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4116020624311017346, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1714396499}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
 --- !u!1001 &5809206778870144655
 PrefabInstance:
@@ -16390,6 +16372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1 L
       objectReference: {fileID: 0}
+    - target: {fileID: 6291621135616304346, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+      propertyPath: currentMatchPlayer1L
+      value: 
+      objectReference: {fileID: 1354842610}
     - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
       propertyPath: Score
       value: 
@@ -16446,14 +16432,6 @@ PrefabInstance:
       propertyPath: BulletR_ps
       value: 
       objectReference: {fileID: 1302222859}
-    - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: bulletPrefabL
-      value: 
-      objectReference: {fileID: 9135184541824165562, guid: f82aa331ec64e9b47bdc0be43f953db3, type: 3}
-    - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: bulletPrefabEnemy
-      value: 
-      objectReference: {fileID: 8558177096698333003, guid: 978414012ff03664492016523765d5c1, type: 3}
     - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
       propertyPath: CountdownControllerIstance
       value: 
@@ -16514,9 +16492,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5669422846116776270, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 678185916879883003, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1054997666}
+      addedObject: {fileID: 1930378906}
   m_SourcePrefab: {fileID: 100100000, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
 --- !u!1001 &9013884104419625789
 PrefabInstance:
