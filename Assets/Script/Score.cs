@@ -83,6 +83,7 @@ public class Score : MonoBehaviour
             HeartPlayer11.SetActive(false);
             cuorePerso = true;
         }
+
         player1HasShoot = false;
         player2HasShoot = false;
 

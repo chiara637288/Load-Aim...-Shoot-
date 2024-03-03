@@ -34,6 +34,11 @@ public class CountdownController : MonoBehaviour
 
     private void Start()
     {
+        timeToshootL = false;
+        timeToshootR = false;
+        timeOver = false;
+        countdownTime = 3;
+
         StartCoroutine(CountdownToStart());
     }
 
@@ -58,7 +63,7 @@ public class CountdownController : MonoBehaviour
 
     IEnumerator CountdownToStart()
     {
-            Score.cuorePerso = false;
+        Score.cuorePerso = false;
 
         if (countdownTime == 3)
         {
@@ -87,53 +92,53 @@ public class CountdownController : MonoBehaviour
 
         timeToshootL = true;
         timeToshootR = true;
-        
-            yield return new WaitForSeconds(0.4f);
-            countdownShoot.SetActive(false);
-            ShootText.SetActive(false);
 
-            yield return new WaitForSeconds(5f);  
-            countdown5.SetActive(true);
+        yield return new WaitForSeconds(0.4f);
+        countdownShoot.SetActive(false);
+        ShootText.SetActive(false);
 
-            yield return new WaitForSeconds(1f);
-            countdown5.SetActive(false);
-            countdown4.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        countdown5.SetActive(true);
 
-            yield return new WaitForSeconds(1f);
-            countdown4.SetActive(false);
-            countdown3.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        countdown5.SetActive(false);
+        countdown4.SetActive(true);
 
-            yield return new WaitForSeconds(1f);
-            countdown3.SetActive(false);
-            countdown2.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        countdown4.SetActive(false);
+        countdown3.SetActive(true);
 
-            yield return new WaitForSeconds(1f);
-            countdown2.SetActive(false);
-            countdown1.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        countdown3.SetActive(false);
+        countdown2.SetActive(true);
 
-            yield return new WaitForSeconds(1f);
-            countdown1.SetActive(false);
-            countdownTimesUp.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        countdown2.SetActive(false);
+        countdown1.SetActive(true);
 
-            timeToshootL = false;
-            timeToshootR = false;
-            timeOver = true;
+        yield return new WaitForSeconds(1f);
+        countdown1.SetActive(false);
+        countdownTimesUp.SetActive(true);
+
+        timeToshootL = false;
+        timeToshootR = false;
+        timeOver = true;
     }
 
     private void StopCountdown()
     {
-        
-            StopAllCoroutines();
 
-            countdownShoot.SetActive(false);
-            countdown5.SetActive(false);
-            countdown4.SetActive(false);
-            countdown3.SetActive(false);
-            countdown2.SetActive(false);
-            countdown1.SetActive(false);
-            countdownTimesUp.SetActive(false);
+        StopAllCoroutines();
 
-            Invoke("EndRoundStuff", 2f);
+        countdownShoot.SetActive(false);
+        countdown5.SetActive(false);
+        countdown4.SetActive(false);
+        countdown3.SetActive(false);
+        countdown2.SetActive(false);
+        countdown1.SetActive(false);
+        countdownTimesUp.SetActive(false);
+
+        Invoke("EndRoundStuff", 2f);
     }
 
     private void EndRoundStuff()
@@ -141,5 +146,12 @@ public class CountdownController : MonoBehaviour
         timeToshootL = false;
         timeToshootR = false;
         timeOver = true;
+
+        Invoke("RestartGame", 2f);
+    }
+
+    private void RestartGame()
+    {
+        StartCoroutine(CountdownToStart());
     }
 }
