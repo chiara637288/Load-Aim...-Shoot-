@@ -31,7 +31,7 @@ public class BulletL : MonoBehaviour
 
         if (Score.currentLevel <= 0)
         {
-            velocitaMinima = 0.1f;
+
         }
         else if (Score.currentLevel == 1)
         {
