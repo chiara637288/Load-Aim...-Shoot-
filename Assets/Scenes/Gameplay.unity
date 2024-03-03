@@ -342,6 +342,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203813155}
   m_CullTransparentMesh: 1
+--- !u!1 &221556194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6114630335275800897, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
+  m_PrefabInstance: {fileID: 5593754191427818268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &320613261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,6 +1960,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &815087477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4459501697513807980, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+  m_PrefabInstance: {fileID: 5809206778870144655}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1003571585
 GameObject:
   m_ObjectHideFlags: 0
@@ -9356,6 +9366,8 @@ MonoBehaviour:
   timeToshootL: 0
   timeToshootR: 0
   timeOver: 0
+  weaponL: {fileID: 815087477}
+  weaponR: {fileID: 221556194}
   Score: {fileID: 1354842610}
 --- !u!4 &1477602293
 Transform:

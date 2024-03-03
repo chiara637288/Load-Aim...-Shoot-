@@ -33,7 +33,7 @@ public class WeaponL : MonoBehaviour
     string randomValue;
     string randomValueParryL;
 
-    void Start()
+    void OnEnable()
     {
         // Call the function to randomly pick a value from the array at the beginning
         randomValue = GetRandomValue(myArray);
@@ -41,10 +41,6 @@ public class WeaponL : MonoBehaviour
 
         randomValueParryL = GetRandomValueParry(parryArrayL);
         Debug.Log("Randomly picked value parryL : " + randomValueParryL);
-
-       // Renderer bulletRenderer = bulletPrefab.GetComponent<Renderer>();
-
-       // bulletRenderer.enabled = true;
 
     }
 
@@ -152,6 +148,8 @@ public class WeaponL : MonoBehaviour
 
     void DisplayButton(string value, bool isVisible)
     {
+
+        //print("DUDE");
         // Display the corresponding button based on the input value
         switch (value)
         {

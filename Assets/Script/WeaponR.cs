@@ -32,7 +32,7 @@ public class WeaponR : MonoBehaviour
     string randomValue;
     string randomValueParry;
 
-    void Start()
+    void OnEnable()
     {
         // Call the function to randomly pick a value from the array at the beginning
         randomValue = GetRandomValue(myArray);

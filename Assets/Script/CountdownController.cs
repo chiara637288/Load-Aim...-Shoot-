@@ -27,8 +27,11 @@ public class CountdownController : MonoBehaviour
     public bool timeOver = false;
     private bool previousParryL = false;
     private bool previousParryR = false;
+    private bool CountdownStop = false;
     private BulletL bulletL;
     private BulletR bulletR;
+    public GameObject weaponL;
+    public GameObject weaponR;
     public Score Score;
 
 
@@ -64,6 +67,7 @@ public class CountdownController : MonoBehaviour
     IEnumerator CountdownToStart()
     {
         Score.cuorePerso = false;
+        CountdownStop = false;
 
         if (countdownTime == 3)
         {
@@ -127,18 +131,22 @@ public class CountdownController : MonoBehaviour
 
     private void StopCountdown()
     {
+        if (CountdownStop == false)
+        {
+            StopAllCoroutines();
 
-        StopAllCoroutines();
+            countdownShoot.SetActive(false);
+            countdown5.SetActive(false);
+            countdown4.SetActive(false);
+            countdown3.SetActive(false);
+            countdown2.SetActive(false);
+            countdown1.SetActive(false);
+            countdownTimesUp.SetActive(false);
 
-        countdownShoot.SetActive(false);
-        countdown5.SetActive(false);
-        countdown4.SetActive(false);
-        countdown3.SetActive(false);
-        countdown2.SetActive(false);
-        countdown1.SetActive(false);
-        countdownTimesUp.SetActive(false);
+            Invoke("EndRoundStuff", 2f);
 
-        Invoke("EndRoundStuff", 2f);
+            CountdownStop = true;
+        }
     }
 
     private void EndRoundStuff()
@@ -152,6 +160,16 @@ public class CountdownController : MonoBehaviour
 
     private void RestartGame()
     {
+        weaponL.GetComponent<WeaponL>().enabled = false;
+        weaponL.GetComponent<WeaponL>().enabled = true;
+
+        weaponR.GetComponent<WeaponR>().enabled = false;
+        weaponR.GetComponent<WeaponR>().enabled = true;
+
+        StopAllCoroutines();
+
+        countdownTime = 3;
+
         StartCoroutine(CountdownToStart());
     }
 
