@@ -33,6 +33,7 @@ public class CountdownController : MonoBehaviour
     public GameObject weaponL;
     public GameObject weaponR;
     public Score Score;
+    public Animator animator;
 
 
     private void Start()
@@ -40,7 +41,6 @@ public class CountdownController : MonoBehaviour
         timeToshootL = false;
         timeToshootR = false;
         timeOver = false;
-        countdownTime = 3;
 
         Invoke("StartGame", 3f);
     }
@@ -71,6 +71,7 @@ public class CountdownController : MonoBehaviour
 
         if (countdownTime == 3)
         {
+            animator.SetBool("Time To Gun", true);
             countdownLoad.SetActive(true);
             LoadText.SetActive(true);
 
