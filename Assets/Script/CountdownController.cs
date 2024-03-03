@@ -99,7 +99,7 @@ public class CountdownController : MonoBehaviour
         timeToshootL = true;
         timeToshootR = true;
 
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.6f);
         countdownShoot.SetActive(false);
         ShootText.SetActive(false);
 
