@@ -9074,6 +9074,7 @@ MonoBehaviour:
   HeartPlayer21: {fileID: 2127220031}
   HeartPlayer22: {fileID: 1317602831}
   HeartPlayer23: {fileID: 505782030}
+  animator: {fileID: 1930378906}
 --- !u!1 &1368914691
 GameObject:
   m_ObjectHideFlags: 0
@@ -16420,6 +16421,10 @@ PrefabInstance:
       propertyPath: ButtonZ
       value: 
       objectReference: {fileID: 687407761}
+    - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1930378906}
     - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
       propertyPath: BulletR_ps
       value: 

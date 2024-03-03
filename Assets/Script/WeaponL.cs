@@ -27,6 +27,7 @@ public class WeaponL : MonoBehaviour
     public CountdownController CountdownControllerIstanceTimeOver;
     public Score Score;
     private BulletR bulletR;
+    public Animator animator;
 
     string[] myArray = { "Q", "W", "E", "R", "T", "Y" };
     string[] parryArrayL = { "A", "S", "D", "F", "Z", "X" };
@@ -149,7 +150,6 @@ public class WeaponL : MonoBehaviour
     void DisplayButton(string value, bool isVisible)
     {
 
-        //print("DUDE");
         // Display the corresponding button based on the input value
         switch (value)
         {
@@ -203,6 +203,9 @@ public class WeaponL : MonoBehaviour
     {
         // Shooting spawn
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+        animator.SetBool("Time To Gun", false);
+        animator.SetBool("Time To Parry", true);
 
         // Hide the button after shooting
         switch (randomValue)

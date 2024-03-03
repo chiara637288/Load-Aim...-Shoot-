@@ -17,6 +17,8 @@ public class Score : MonoBehaviour
     public GameObject HeartPlayer21;
     public GameObject HeartPlayer22;
     public GameObject HeartPlayer23;
+    public Animator animator;
+
 
     public void Update()    //non può controllare costantemente, dovrebbe attivarsi solo dopo x tempo (magari sopo la fine delle animazioni di morti o di parry) //Se uno spara e l'artro muore subito non c'è nessuna condizione che controlli sta cosa 
     {
@@ -78,7 +80,7 @@ public class Score : MonoBehaviour
             HeartPlayer12.SetActive(false);
             cuorePerso = true;
         }
-        else if (HeartPlayer13.activeSelf && cuorePerso == false)
+        else if (HeartPlayer11.activeSelf && cuorePerso == false)
         {
             HeartPlayer11.SetActive(false);
             cuorePerso = true;
@@ -87,7 +89,8 @@ public class Score : MonoBehaviour
         player1HasShoot = false;
         player2HasShoot = false;
 
-}
+        animator.SetBool("I'm Dead", true);
+    }
 
    public void DeathPlayer2()
     {
@@ -109,5 +112,6 @@ public class Score : MonoBehaviour
 
         player1HasShoot = false;
         player2HasShoot = false;
+
     }
 }
