@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 36869336431034140}
+  - component: {fileID: 4423126051060721953}
   - component: {fileID: 1721957232172429042}
   - component: {fileID: -5305534673879751743}
   - component: {fileID: 6437010715179323614}
-  - component: {fileID: 4423126051060721953}
   m_Layer: 0
   m_Name: Prf_BulletR
   m_TagString: BulletR
@@ -35,6 +35,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4423126051060721953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8558177096698333003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 590251b1037e7ea40932ab3edb3ac272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocitaIniziale: -10
+  velocitaMinima: 0.1
+  velocitaMinimaLiv1: 0.2
+  velocitaMinimaLiv2: 0.4
+  velocitaMinimaLiv3: 0.6
+  velocitaMinimaLiv4: 0.8
+  velocitaMinimaLiv5: 0.9
+  velocitaMinimaLiv6: 1
+  velocitaDecelerazione: 60
+  oggettoTrigger: {fileID: 7704572664198947889, guid: acbee482a56ca59489ad71905118add9, type: 3}
+  parryMomentR: 0
+  Score: {fileID: 0}
 --- !u!212 &1721957232172429042
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -159,21 +183,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.045168474, y: 0.029681148}
   m_EdgeRadius: 0
---- !u!114 &4423126051060721953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8558177096698333003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590251b1037e7ea40932ab3edb3ac272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocitaIniziale: -10
-  velocitaMinima: 0.1
-  velocitaDecelerazione: 60
-  oggettoTrigger: {fileID: 7704572664198947889, guid: acbee482a56ca59489ad71905118add9, type: 3}
-  parryMomentR: 0
-  Score: {fileID: 0}

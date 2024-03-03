@@ -6,6 +6,12 @@ public class BulletR : MonoBehaviour
 {
     public float velocitaIniziale = 10f; // Velocità iniziale del proiettile
     public float velocitaMinima = 1f; // Velocità minima consentita
+    public float velocitaMinimaLiv1 = 0.2f; //velocità minima al livello 1
+    public float velocitaMinimaLiv2 = 0.4f; 
+    public float velocitaMinimaLiv3 = 0.6f; 
+    public float velocitaMinimaLiv4 = 0.8f; 
+    public float velocitaMinimaLiv5 = 0.9f; 
+    public float velocitaMinimaLiv6 = 1f; 
     public float velocitaDecelerazione = 2f; // Fattore di decelerazione graduale
     public GameObject oggettoTrigger; // Oggetto con Collider2D per il trigger
 
@@ -22,6 +28,35 @@ public class BulletR : MonoBehaviour
 
         // Inizializza il riferimento al Rigidbody2D
         rb = GetComponent<Rigidbody2D>();
+
+        if (Score.currentLevel <= 0)
+        {
+            velocitaMinima = 1f;
+        }
+        else if (Score.currentLevel == 1)
+        {
+            velocitaMinima = velocitaMinimaLiv1;
+        }
+        else if (Score.currentLevel == 2)
+        {
+            velocitaMinima = velocitaMinimaLiv2;
+        }
+        else if (Score.currentLevel == 3)
+        {
+            velocitaMinima = velocitaMinimaLiv3;
+        }
+        else if (Score.currentLevel == 4)
+        {
+            velocitaMinima = velocitaMinimaLiv4;
+        }
+        else if (Score.currentLevel == 5)
+        {
+            velocitaMinima = velocitaMinimaLiv5;
+        }
+        else 
+        {
+            velocitaMinima = velocitaMinimaLiv6;
+        }
 
         // Assegna la velocità iniziale al proiettile
         rb.velocity = -transform.right * velocitaIniziale;
