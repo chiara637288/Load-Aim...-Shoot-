@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletR : MonoBehaviour
 {
     public float velocitaIniziale = 10f; // Velocità iniziale del proiettile
-    public float velocitaMinima = 1f; // Velocità minima consentita
+    public float velocitaMinima = 0.1f; // Velocità minima consentita
     public float velocitaMinimaLiv1 = 0.2f; //velocità minima al livello 1
     public float velocitaMinimaLiv2 = 0.4f; 
     public float velocitaMinimaLiv3 = 0.6f; 
@@ -31,7 +31,7 @@ public class BulletR : MonoBehaviour
 
         if (Score.currentLevel <= 0)
         {
-            velocitaMinima = 1f;
+            velocitaMinima = 0.1f;
         }
         else if (Score.currentLevel == 1)
         {

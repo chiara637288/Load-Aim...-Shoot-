@@ -9082,6 +9082,7 @@ MonoBehaviour:
   HeartPlayer21: {fileID: 2127220031}
   HeartPlayer22: {fileID: 1317602831}
   HeartPlayer23: {fileID: 505782030}
+  CountdownController: {fileID: 1477602291}
 --- !u!1 &1368914691
 GameObject:
   m_ObjectHideFlags: 0
@@ -9338,7 +9339,7 @@ GameObject:
   - component: {fileID: 1477602293}
   - component: {fileID: 1477602292}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: Countdown Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
