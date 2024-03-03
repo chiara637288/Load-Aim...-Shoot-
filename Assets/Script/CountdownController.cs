@@ -39,7 +39,7 @@ public class CountdownController : MonoBehaviour
         timeOver = false;
         countdownTime = 3;
 
-        StartCoroutine(CountdownToStart());
+        Invoke("StartGame", 3f);
     }
 
     public void Update()
@@ -151,6 +151,11 @@ public class CountdownController : MonoBehaviour
     }
 
     private void RestartGame()
+    {
+        StartCoroutine(CountdownToStart());
+    }
+
+    private void StartGame()
     {
         StartCoroutine(CountdownToStart());
     }
