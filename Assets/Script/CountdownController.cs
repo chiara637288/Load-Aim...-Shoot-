@@ -41,9 +41,9 @@ public class CountdownController : MonoBehaviour
         timeToshootL = false;
         timeToshootR = false;
         timeOver = false;
-        Invoke("StartIdle", 2f);
+        Invoke("StartIdle", 4f);
 
-        Invoke("StartGame", 3f);
+        Invoke("StartGame", 4f);
     }
 
     public void Update()
