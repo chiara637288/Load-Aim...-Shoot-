@@ -49,6 +49,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocitaIniziale: 10
   velocitaMinima: 0.1
+  velocitaMinimaLiv1: 0.15
+  velocitaMinimaLiv2: 0.2
+  velocitaMinimaLiv3: 0.25
+  velocitaMinimaLiv4: 0.3
+  velocitaMinimaLiv5: 0.4
+  velocitaMinimaLiv6: 0.5
   velocitaDecelerazione: 60
   oggettoTrigger: {fileID: 2288236651822864539, guid: d1b6ccc8fe84b0048bfb1b7c6a9990d5, type: 3}
   parryMomentL: 0
