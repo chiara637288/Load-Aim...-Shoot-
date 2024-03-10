@@ -59,7 +59,7 @@ public class CountdownController : MonoBehaviour
             }
         }
 
-        if (Score.cuorePerso == true)
+        if (Score.risulatoCalcolato == true)
         {
             StopCountdown();
         }
@@ -67,7 +67,10 @@ public class CountdownController : MonoBehaviour
 
     IEnumerator CountdownToStart()
     {
-        Score.cuorePerso = false;
+        Score.risulatoCalcolato = false;
+        Score.currentMatchPlayer1LResult = 3;
+        Score.currentMatchPlayer2RResult = 3;
+
         CountdownStop = false;
 
         if (countdownTime == 3)
