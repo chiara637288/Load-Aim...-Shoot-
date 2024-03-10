@@ -27,26 +27,26 @@ public class Score : MonoBehaviour
             roundBothDied = roundBothDied++;
             if (roundBothDied == 2)
             {
-                currentLevel = currentLevel--;
+                currentLevel--;
                 roundBothDied = 0;
             }
 
             risulatoCalcolato = true;
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1 && risulatoCalcolato == false) //e se uno fa 1 e l'altro fa 2?
+        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1 && risulatoCalcolato == false) 
         {
-            currentLevel = currentLevel++;
+            currentLevel++;
 
             risulatoCalcolato = true;
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0 && risulatoCalcolato == false) //player 1 ha vinto e player 2 ha perso
+        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0 && risulatoCalcolato == false) 
         {
            DeathPlayer2();
         }
 
-        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1 && risulatoCalcolato == false) // Player1 ha perso e player 2 ha vinto
+        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1 && risulatoCalcolato == false) 
         {
            DeathPlayer1();
         }
