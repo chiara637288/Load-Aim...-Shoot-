@@ -16422,10 +16422,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 687407761}
     - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1930378906}
-    - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
       propertyPath: BulletR_ps
       value: 
       objectReference: {fileID: 1302222859}

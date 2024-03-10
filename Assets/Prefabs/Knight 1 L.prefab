@@ -79,7 +79,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.24, y: 0.23}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -172,6 +172,7 @@ MonoBehaviour:
   CountdownControllerIstance1: {fileID: 0}
   CountdownControllerIstanceTimeOver: {fileID: 0}
   Score: {fileID: 0}
+  animator: {fileID: 5343750363139590922}
 --- !u!1 &4792921993986329234
 GameObject:
   m_ObjectHideFlags: 0
