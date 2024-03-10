@@ -70,6 +70,7 @@ public class CountdownController : MonoBehaviour
         Score.risulatoCalcolato = false;
         Score.currentMatchPlayer1LResult = 3;
         Score.currentMatchPlayer2RResult = 3;
+        timeOver = false;
 
         CountdownStop = false;
 

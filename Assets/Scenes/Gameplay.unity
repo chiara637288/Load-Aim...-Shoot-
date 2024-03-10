@@ -9067,7 +9067,7 @@ MonoBehaviour:
   currentMatchPlayer2RResult: 3
   player1HasShoot: 0
   player2HasShoot: 0
-  cuorePerso: 0
+  risulatoCalcolato: 0
   HeartPlayer11: {fileID: 2078378463}
   HeartPlayer12: {fileID: 1399457208}
   HeartPlayer13: {fileID: 1440077939}
@@ -16052,7 +16052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108759522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.098, y: -0.656, z: 0}
+  m_LocalPosition: {x: 1.194, y: -0.656, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

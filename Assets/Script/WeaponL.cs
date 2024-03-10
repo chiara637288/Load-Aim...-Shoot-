@@ -90,9 +90,9 @@ public class WeaponL : MonoBehaviour
             }
         }
 
-        if (bulletR != null)
+        if (bulletR != null) 
         {
-            if (bulletR.parryMomentR)
+            if (bulletR.parryMomentR == true)
             {
                 DisplayButtonParry(randomValueParryL, CountdownControllerIstance.timeToshootL);                 // Display the corresponding button based on the random value
 
@@ -149,9 +149,8 @@ public class WeaponL : MonoBehaviour
 
     void DisplayButton(string value, bool isVisible)
     {
-
         // Display the corresponding button based on the input value
-        switch (value)
+        switch (value) //la seconda volta non partono ma qua dentro ci entra
         {
             case "Q":
                 ButtonQ.SetActive(true);
@@ -174,7 +173,7 @@ public class WeaponL : MonoBehaviour
         }
     }
 
-    void DisplayButtonParry(string value2, bool isVisible)
+    void DisplayButtonParry(string value2, bool isVisible) 
     {
         // Display the corresponding button based on the input value
         switch (value2)
