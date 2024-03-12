@@ -117,5 +117,7 @@ public class Score : MonoBehaviour
         player1HasShoot = false;
         player2HasShoot = false;
 
+        animator.SetBool("I'm Dead 2", true);
+
     }
 }

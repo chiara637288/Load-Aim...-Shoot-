@@ -77,6 +77,7 @@ public class CountdownController : MonoBehaviour
         if (countdownTime == 3)
         {
             animator.SetBool("Time To Gun", true);
+            animator.SetBool("Time To Gun 2", true);
             countdownLoad.SetActive(true);
             LoadText.SetActive(true);
 
@@ -186,5 +187,6 @@ public class CountdownController : MonoBehaviour
     private void StartIdle()
     {
         animator.SetBool("Start Idle", true);
+        animator.SetBool("Start Idle 2", true);
     }
 }

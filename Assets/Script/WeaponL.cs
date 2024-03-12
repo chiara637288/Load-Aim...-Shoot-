@@ -257,8 +257,9 @@ public class WeaponL : MonoBehaviour
         
           SpriteRenderer bulletRenderer = FindObjectOfType<BulletR>().GetComponent<SpriteRenderer>();
           bulletRenderer.enabled = false;
-          animator.SetBool("ParrySlash", true);
-          animator.SetBool("ParrySlash", false);
+
+          animator.SetBool("Parry Slash", true);
+          animator.SetBool("Parry Slash", false);
 
           BulletR_ps.Play();
           Score.currentMatchPlayer1LResult = 1;

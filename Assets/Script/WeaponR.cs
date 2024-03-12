@@ -26,6 +26,7 @@ public class WeaponR : MonoBehaviour
     public CountdownController CountdownControllerIstanceTimeOver;
     public Score Score;
     private BulletL bulletL;
+    public Animator animator;
 
     string[] myArray = { "P", "O", "I", "U", "L", "K" };
     string[] parryArray = { "M", "N", "B", "V", "J", "H" };
@@ -199,6 +200,9 @@ public class WeaponR : MonoBehaviour
         // Shooting spawn
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
+        animator.SetBool("Time To Gun 2", false);
+        animator.SetBool("Time To Parry 2", true);
+
         // Hide the button after shooting
         switch (randomValue)
         {
@@ -250,6 +254,9 @@ public class WeaponR : MonoBehaviour
 
         SpriteRenderer bulletRenderer = FindObjectOfType<BulletL>().GetComponent<SpriteRenderer>();
         bulletRenderer.enabled = false;
+
+        animator.SetBool("Parry Slash 2", true);
+        animator.SetBool("Parry Slash 2", false);
 
         BulletL_ps.Play();
         Score.currentMatchPlayer2RResult = 1;
