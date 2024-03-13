@@ -1819,7 +1819,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -160.2}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -862.31995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &791076371
@@ -2540,7 +2540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -160.20003}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -862.31995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049479918
@@ -9075,6 +9075,7 @@ MonoBehaviour:
   HeartPlayer22: {fileID: 1317602831}
   HeartPlayer23: {fileID: 505782030}
   animator: {fileID: 1930378906}
+  animatorR: {fileID: 5593754191427818270}
 --- !u!1 &1368914691
 GameObject:
   m_ObjectHideFlags: 0
@@ -9371,6 +9372,7 @@ MonoBehaviour:
   weaponR: {fileID: 221556194}
   Score: {fileID: 1354842610}
   animator: {fileID: 1930378906}
+  animatorR: {fileID: 5593754191427818270}
 --- !u!4 &1477602293
 Transform:
   m_ObjectHideFlags: 0
@@ -9691,7 +9693,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -160.20003}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -862.31995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1599825783
@@ -16351,37 +16353,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5993565191683040873, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5593754191427818270}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
---- !u!1 &5593754191427818269 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5993565191683040873, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
+--- !u!95 &5593754191427818270 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 268471750861912529, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
   m_PrefabInstance: {fileID: 5593754191427818268}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &5593754191427818270
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5593754191427818269}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b3006199e6033cb44948c4183370556f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5809206778870144655
 PrefabInstance:
   m_ObjectHideFlags: 0

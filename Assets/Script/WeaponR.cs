@@ -200,8 +200,8 @@ public class WeaponR : MonoBehaviour
         // Shooting spawn
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
-        animator.SetBool("Time To Gun 2", false);
-        animator.SetBool("Time To Parry 2", true);
+        animator.SetBool("Time To Gun R", false);
+        animator.SetBool("Time To Parry R", true);
 
         // Hide the button after shooting
         switch (randomValue)
@@ -255,8 +255,8 @@ public class WeaponR : MonoBehaviour
         SpriteRenderer bulletRenderer = FindObjectOfType<BulletL>().GetComponent<SpriteRenderer>();
         bulletRenderer.enabled = false;
 
-        animator.SetBool("Parry Slash 2", true);
-        animator.SetBool("Parry Slash 2", false);
+        animator.SetBool("Parry Slash R", true);
+        animator.SetBool("Parry Slash R", false);
 
         BulletL_ps.Play();
         Score.currentMatchPlayer2RResult = 1;

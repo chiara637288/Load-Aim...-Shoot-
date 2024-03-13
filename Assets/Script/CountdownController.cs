@@ -25,8 +25,8 @@ public class CountdownController : MonoBehaviour
     public bool timeToshootL = false;
     public bool timeToshootR = false;
     public bool timeOver = false;
-    private bool previousParryL = false;
-    private bool previousParryR = false;
+    //private bool previousParryL = false;
+    //private bool previousParryR = false;
     private bool CountdownStop = false;
     private BulletL bulletL;
     private BulletR bulletR;
@@ -34,6 +34,7 @@ public class CountdownController : MonoBehaviour
     public GameObject weaponR;
     public Score Score;
     public Animator animator;
+    public Animator animatorR;
 
 
     private void Start()
@@ -70,6 +71,8 @@ public class CountdownController : MonoBehaviour
         Score.risulatoCalcolato = false;
         Score.currentMatchPlayer1LResult = 3;
         Score.currentMatchPlayer2RResult = 3;
+        animator.SetBool("I'm Dead", false);
+        animatorR.SetBool("I'm Dead R", false);
         timeOver = false;
 
         CountdownStop = false;
@@ -77,7 +80,7 @@ public class CountdownController : MonoBehaviour
         if (countdownTime == 3)
         {
             animator.SetBool("Time To Gun", true);
-            animator.SetBool("Time To Gun 2", true);
+            animatorR.SetBool("Time To Gun R", true);
             countdownLoad.SetActive(true);
             LoadText.SetActive(true);
 
@@ -187,6 +190,6 @@ public class CountdownController : MonoBehaviour
     private void StartIdle()
     {
         animator.SetBool("Start Idle", true);
-        animator.SetBool("Start Idle 2", true);
+        animatorR.SetBool("Start Idle R", true);
     }
 }
