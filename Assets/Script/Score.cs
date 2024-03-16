@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 
 public class Score : MonoBehaviour
@@ -19,7 +20,7 @@ public class Score : MonoBehaviour
     public GameObject HeartPlayer23;
     public Animator animator;
     public Animator animatorR;
-
+    public CameraShake cameraShake;
 
     public void Update()    //non può controllare costantemente, dovrebbe attivarsi solo dopo x tempo (magari sopo la fine delle animazioni di morti o di parry) //Se uno spara e l'artro muore subito non c'è nessuna condizione che controlli sta cosa 
     {
@@ -75,6 +76,8 @@ public class Score : MonoBehaviour
 
    public void DeathPlayer1()
     {
+        StartCoroutine(cameraShake.Shake(.15f, .4f));
+
         if (HeartPlayer13.activeSelf && risulatoCalcolato == false)
         {
             HeartPlayer13.SetActive(false);
@@ -99,6 +102,8 @@ public class Score : MonoBehaviour
 
    public void DeathPlayer2()
     {
+        StartCoroutine(cameraShake.Shake(.15f, .4f));
+
         if (HeartPlayer21.activeSelf && risulatoCalcolato == false)
         {
             HeartPlayer21.SetActive(false);

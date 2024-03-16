@@ -229,6 +229,7 @@ public class WeaponR : MonoBehaviour
 
     void Parry()
     {
+
         switch (randomValueParry)
         {
             case "M":

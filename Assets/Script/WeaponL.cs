@@ -232,6 +232,7 @@ public class WeaponL : MonoBehaviour
     }
     void Parry()
     {
+
         switch (randomValueParryL)
         {
 
