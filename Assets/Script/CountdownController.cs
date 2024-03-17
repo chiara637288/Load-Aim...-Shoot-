@@ -83,8 +83,6 @@ public class CountdownController : MonoBehaviour
             animator.SetBool("Time To Gun", true);
             animatorR.SetBool("Time To Gun R", true);
 
-            animator.SetBool("Restart Game", true);
-            animator.SetBool("Restart Game", false);
             countdownLoad.SetActive(true);
             LoadText.SetActive(true);
 

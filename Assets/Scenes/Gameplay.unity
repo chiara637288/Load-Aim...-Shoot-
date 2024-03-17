@@ -9852,6 +9852,7 @@ MonoBehaviour:
   animator: {fileID: 1930378906}
   animatorR: {fileID: 5593754191427818270}
   cameraShake: {fileID: 519420034}
+  countdownController: {fileID: 1477602292}
 --- !u!1 &1368914691
 GameObject:
   m_ObjectHideFlags: 0

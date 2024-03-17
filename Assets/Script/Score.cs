@@ -21,6 +21,7 @@ public class Score : MonoBehaviour
     public Animator animator;
     public Animator animatorR;
     public CameraShake cameraShake;
+    public CountdownController countdownController;
 
     public void Update()    //non può controllare costantemente, dovrebbe attivarsi solo dopo x tempo (magari sopo la fine delle animazioni di morti o di parry) //Se uno spara e l'artro muore subito non c'è nessuna condizione che controlli sta cosa 
     {
@@ -97,6 +98,8 @@ public class Score : MonoBehaviour
         player1HasShoot = false;
         player2HasShoot = false;
 
+        countdownController.timeToshootL = false;
+
         animator.SetBool("I'm Dead", true);
     }
 
@@ -122,6 +125,8 @@ public class Score : MonoBehaviour
 
         player1HasShoot = false;
         player2HasShoot = false;
+
+        countdownController.timeToshootR = false;
 
         animatorR.SetBool("I'm Dead R", true);
 
