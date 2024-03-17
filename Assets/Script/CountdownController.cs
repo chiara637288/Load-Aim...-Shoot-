@@ -71,6 +71,10 @@ public class CountdownController : MonoBehaviour
         Score.risulatoCalcolato = false;
         Score.currentMatchPlayer1LResult = 3;
         Score.currentMatchPlayer2RResult = 3;
+
+        animator.SetBool("Restart Game", true);
+        animator.SetBool("Restart Game", false);
+
         animator.SetBool("I'm Dead", false);
         animatorR.SetBool("I'm Dead R", false);
         timeOver = false;
