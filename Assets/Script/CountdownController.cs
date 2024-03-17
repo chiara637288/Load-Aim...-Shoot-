@@ -39,6 +39,8 @@ public class CountdownController : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.FadeIn("Musica1");
+
         timeToshootL = false;
         timeToshootR = false;
         timeOver = false;

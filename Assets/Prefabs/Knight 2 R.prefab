@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 7276212505173404340}
   - component: {fileID: 5320691236827240832}
   - component: {fileID: 268471750861912529}
+  - component: {fileID: 5507997631973898529}
   m_Layer: 0
   m_Name: Grafica Player2
   m_TagString: Untagged
@@ -225,6 +226,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5507997631973898529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993565191683040873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9074fa541ba4cc428759a3b226a3cb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6014798425996091374
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +302,7 @@ Transform:
   - {fileID: 2456662953903355051}
   - {fileID: 7276212505173404340}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8347839700279669743
 MonoBehaviour:

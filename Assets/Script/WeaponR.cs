@@ -229,6 +229,7 @@ public class WeaponR : MonoBehaviour
 
     void Parry()
     {
+        AudioManager.instance.FadeIn("Slash2");
 
         switch (randomValueParry)
         {
