@@ -257,7 +257,6 @@ public class WeaponR : MonoBehaviour
         bulletRenderer.enabled = false;
 
         animator.SetBool("Parry Slash R", true);
-        animator.SetBool("Parry Slash R", false);
 
         BulletL_ps.Play();
         Score.currentMatchPlayer2RResult = 1;
