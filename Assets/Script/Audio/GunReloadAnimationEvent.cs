@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunReloadAnimationEvent : MonoBehaviour
 {
-    private void Start()
+    public void HandleAnimationEvent()
     {
         AudioManager.instance.FadeIn("GunReload");
     }
