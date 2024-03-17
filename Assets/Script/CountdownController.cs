@@ -72,9 +72,6 @@ public class CountdownController : MonoBehaviour
         Score.currentMatchPlayer1LResult = 3;
         Score.currentMatchPlayer2RResult = 3;
 
-        animator.SetBool("Restart Game", true);
-        animator.SetBool("Restart Game", false);
-
         animator.SetBool("I'm Dead", false);
         animatorR.SetBool("I'm Dead R", false);
         timeOver = false;
@@ -85,6 +82,9 @@ public class CountdownController : MonoBehaviour
         {
             animator.SetBool("Time To Gun", true);
             animatorR.SetBool("Time To Gun R", true);
+
+            animator.SetBool("Restart Game", true);
+            animator.SetBool("Restart Game", false);
             countdownLoad.SetActive(true);
             LoadText.SetActive(true);
 

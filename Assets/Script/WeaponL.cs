@@ -260,7 +260,7 @@ public class WeaponL : MonoBehaviour
           bulletRenderer.enabled = false;
 
           animator.SetBool("Parry Slash", true);
-          Invoke("SlashStop", 0.1f);
+          Invoke("SlashStop", 0.5f);
 
           BulletR_ps.Play();
           Score.currentMatchPlayer1LResult = 1;
