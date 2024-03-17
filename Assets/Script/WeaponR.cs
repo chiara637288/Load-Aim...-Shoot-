@@ -257,6 +257,7 @@ public class WeaponR : MonoBehaviour
         bulletRenderer.enabled = false;
 
         animator.SetBool("Parry Slash R", true);
+        Invoke("SlashStopR", 0.17f);
 
         BulletL_ps.Play();
         Score.currentMatchPlayer2RResult = 1;
@@ -272,5 +273,9 @@ public class WeaponR : MonoBehaviour
     {
         int randomIndexParry = Random.Range(0, parryArray.Length);
         return parryArray[randomIndexParry];
+    }
+    public void SlashStopR()
+    {
+        animator.SetBool("Parry Slash R", false);
     }
 }
