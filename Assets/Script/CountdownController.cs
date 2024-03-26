@@ -74,6 +74,10 @@ public class CountdownController : MonoBehaviour
         Score.currentMatchPlayer1LResult = 3;
         Score.currentMatchPlayer2RResult = 3;
 
+        animator.SetBool("Restart Game", true);
+        animatorR.SetBool("Restart Game R", true);
+        Invoke("SetRestartAnim", 1f);
+
         animator.SetBool("I'm Dead", false);
         animatorR.SetBool("I'm Dead R", false);
         timeOver = false;
@@ -195,5 +199,10 @@ public class CountdownController : MonoBehaviour
     {
         animator.SetBool("Start Idle", true);
         animatorR.SetBool("Start Idle R", true);
+    }
+    private void SetRestartAnim()
+    {
+        animator.SetBool("Restart Game", false);
+        animatorR.SetBool("Restart Game R", false);
     }
 }

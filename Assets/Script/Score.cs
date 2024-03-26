@@ -37,45 +37,45 @@ public class Score : MonoBehaviour
             risulatoCalcolato = true;
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1 && risulatoCalcolato == false) 
+        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1 && risulatoCalcolato == false)
         {
             currentLevel++;
 
             risulatoCalcolato = true;
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0 && risulatoCalcolato == false) 
+        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0 && risulatoCalcolato == false)
         {
-           DeathPlayer2();
+            DeathPlayer2();
         }
 
-        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1 && risulatoCalcolato == false) 
+        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1 && risulatoCalcolato == false)
         {
-           DeathPlayer1();
+            DeathPlayer1();
         }
 
-        if (player1HasShoot == false && currentMatchPlayer1LResult == 0 && risulatoCalcolato == false) 
+        if (player1HasShoot == false && currentMatchPlayer1LResult == 0 && risulatoCalcolato == false)
         {
             DeathPlayer1();
         }
 
         if (player2HasShoot == false && currentMatchPlayer2RResult == 0 && risulatoCalcolato == false)
         {
-           DeathPlayer2();
+            DeathPlayer2();
         }
 
-        if (currentMatchPlayer1LResult == 2 ) // questo evento forse è meglio toglierlo, conviene fare che se nessuno ha sparato il conto alla roveglia non parte
+        if (currentMatchPlayer1LResult == 2) // questo evento forse è meglio toglierlo, conviene fare che se nessuno ha sparato il conto alla roveglia non parte
         {
             //nulla, vi siete dimenticati di sparate?
         }
 
-        if (currentMatchPlayer2RResult == 2) 
+        if (currentMatchPlayer2RResult == 2)
         {
 
         }
     }
 
-   public void DeathPlayer1()
+    public void DeathPlayer1()
     {
         StartCoroutine(cameraShake.Shake(.15f, .4f));
 
@@ -101,9 +101,11 @@ public class Score : MonoBehaviour
         countdownController.timeToshootL = false;
 
         animator.SetBool("I'm Dead", true);
+
+        Invoke("SetDeathAnimFalse", 1.5f);
     }
 
-   public void DeathPlayer2()
+    public void DeathPlayer2()
     {
         StartCoroutine(cameraShake.Shake(.15f, .4f));
 
@@ -130,5 +132,12 @@ public class Score : MonoBehaviour
 
         animatorR.SetBool("I'm Dead R", true);
 
+        Invoke("SetDeathAnimFalse", 1.5f);
+    }
+
+    public void SetDeathAnimFalse()
+    {
+        animator.SetBool("I'm Dead", false);
+        animatorR.SetBool("I'm Dead R", false);
     }
 }
