@@ -101,8 +101,6 @@ public class Score : MonoBehaviour
         countdownController.timeToshootL = false;
 
         animator.SetBool("I'm Dead", true);
-
-        Invoke("SetDeathAnimFalse", 1.5f);
     }
 
     public void DeathPlayer2()
@@ -131,13 +129,5 @@ public class Score : MonoBehaviour
         countdownController.timeToshootR = false;
 
         animatorR.SetBool("I'm Dead R", true);
-
-        Invoke("SetDeathAnimFalse", 1.5f);
-    }
-
-    public void SetDeathAnimFalse()
-    {
-        animator.SetBool("I'm Dead", false);
-        animatorR.SetBool("I'm Dead R", false);
     }
 }
