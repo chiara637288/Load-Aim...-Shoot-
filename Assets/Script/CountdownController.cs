@@ -47,6 +47,9 @@ public class CountdownController : MonoBehaviour
         Invoke("StartIdle", 4f);
 
         Invoke("StartGame", 4f);
+
+        animator.SetBool("I Win", false);
+        animatorR.SetBool("I Win R", false);
     }
 
     public void Update()

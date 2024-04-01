@@ -101,6 +101,7 @@ public class Score : MonoBehaviour
         countdownController.timeToshootL = false;
 
         animator.SetBool("I'm Dead", true);
+        GameOver();
     }
 
     public void DeathPlayer2()
@@ -121,6 +122,7 @@ public class Score : MonoBehaviour
         {
             HeartPlayer23.SetActive(false);
             risulatoCalcolato = true;
+            GameOver();
         }
 
         player1HasShoot = false;
@@ -130,4 +132,23 @@ public class Score : MonoBehaviour
 
         animatorR.SetBool("I'm Dead R", true);
     }
+
+    public void GameOver()
+    {
+        StopAllCoroutines(); //funziona anche per coroutine che non sono nel loro script?
+
+        if (HeartPlayer21.activeSelf == false)
+        {
+            animator.SetBool("I Win", true);
+        }
+        else if (HeartPlayer11.activeSelf == false)
+        {
+            animatorR.SetBool("I Win R", true);
+        }
+
+        // fai apparire il tasto restart 
+        // fai apprare il tasto per il main menu
+
+    }
+
 }

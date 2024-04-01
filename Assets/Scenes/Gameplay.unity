@@ -3058,7 +3058,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057274793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21791944, y: -0.120429195, z: 0.008883113}
+  m_LocalPosition: {x: 0.2263, y: -0.0915, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9949,6 +9949,8 @@ MonoBehaviour:
   HeartPlayer21: {fileID: 2127220031}
   HeartPlayer22: {fileID: 1317602831}
   HeartPlayer23: {fileID: 505782030}
+  PlayerR: {fileID: 221556194}
+  PlayerL: {fileID: 815087477}
   animator: {fileID: 1930378906}
   animatorR: {fileID: 5593754191427818270}
   cameraShake: {fileID: 519420034}
@@ -22441,6 +22443,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2132000381342540815, guid: acbee482a56ca59489ad71905118add9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.913
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132000381342540815, guid: acbee482a56ca59489ad71905118add9, type: 3}
       propertyPath: m_Size.y
       value: 0.22229886
       objectReference: {fileID: 0}
@@ -22487,7 +22493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7307804514707808665, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.277
+      value: 1.285
       objectReference: {fileID: 0}
     - target: {fileID: 7307804514707808665, guid: fb15d2514cae20147a72d561aae40ef2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22619,6 +22625,18 @@ PrefabInstance:
       propertyPath: currentMatchPlayer1L
       value: 
       objectReference: {fileID: 1354842610}
+    - target: {fileID: 6803055985866762563, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803055985866762563, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803055985866762563, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7022754294615350534, guid: 19b1b7f86a2730d4cb29644a4f362b1c, type: 3}
       propertyPath: Score
       value: 
@@ -22749,6 +22767,10 @@ PrefabInstance:
       value: TriggerKnightL
       objectReference: {fileID: 0}
     - target: {fileID: 2819623399569856098, guid: d1b6ccc8fe84b0048bfb1b7c6a9990d5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.913
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819623399569856098, guid: d1b6ccc8fe84b0048bfb1b7c6a9990d5, type: 3}
       propertyPath: m_Size.y
       value: 0.22659451
       objectReference: {fileID: 0}
@@ -22766,7 +22788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3339892739609363360, guid: d1b6ccc8fe84b0048bfb1b7c6a9990d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.751
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 3339892739609363360, guid: d1b6ccc8fe84b0048bfb1b7c6a9990d5, type: 3}
       propertyPath: m_LocalPosition.y
