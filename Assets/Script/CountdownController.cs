@@ -65,15 +65,15 @@ public class CountdownController : MonoBehaviour
             }
         }
 
-        if (Score.risulatoCalcolato == true)
+        if (Score.risultatoCalcolato == true)
         {
             StopCountdown();
         }
     }
 
     IEnumerator CountdownToStart()
-    {
-        Score.risulatoCalcolato = false;
+    {   
+        Score.risultatoCalcolato = false;
         Score.currentMatchPlayer1LResult = 3;
         Score.currentMatchPlayer2RResult = 3;
 

@@ -11,7 +11,7 @@ public class Score : MonoBehaviour
     public bool player1HasShoot = false;
     public bool player2HasShoot = false;
     private int roundBothDied = 0;
-    public bool risulatoCalcolato = false;
+    public bool risultatoCalcolato = false;
     public GameObject HeartPlayer11;
     public GameObject HeartPlayer12;
     public GameObject HeartPlayer13;
@@ -25,7 +25,7 @@ public class Score : MonoBehaviour
 
     public void Update()    //non può controllare costantemente, dovrebbe attivarsi solo dopo x tempo (magari sopo la fine delle animazioni di morti o di parry) //Se uno spara e l'artro muore subito non c'è nessuna condizione che controlli sta cosa 
     {
-        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 0 && risulatoCalcolato == false)     //entrambi hanno perso e quindi non perdono cuori
+        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 0 && risultatoCalcolato == false)     //entrambi hanno perso e quindi non perdono cuori
         {
             roundBothDied = roundBothDied++;
             if (roundBothDied == 2)
@@ -34,32 +34,32 @@ public class Score : MonoBehaviour
                 roundBothDied = 0;
             }
 
-            risulatoCalcolato = true;
+            risultatoCalcolato = true;
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1 && risulatoCalcolato == false)
+        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1 && risultatoCalcolato == false)
         {
             currentLevel++;
 
-            risulatoCalcolato = true;
+            risultatoCalcolato = true;
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0 && risulatoCalcolato == false)
+        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0 && risultatoCalcolato == false)
         {
             DeathPlayer2();
         }
 
-        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1 && risulatoCalcolato == false)
+        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1 && risultatoCalcolato == false)
         {
             DeathPlayer1();
         }
 
-        if (player1HasShoot == false && currentMatchPlayer1LResult == 0 && risulatoCalcolato == false)
+        if (player1HasShoot == false && currentMatchPlayer1LResult == 0 && risultatoCalcolato == false)
         {
             DeathPlayer1();
         }
 
-        if (player2HasShoot == false && currentMatchPlayer2RResult == 0 && risulatoCalcolato == false)
+        if (player2HasShoot == false && currentMatchPlayer2RResult == 0 && risultatoCalcolato == false)
         {
             DeathPlayer2();
         }
@@ -79,20 +79,21 @@ public class Score : MonoBehaviour
     {
         StartCoroutine(cameraShake.Shake(.15f, .4f));
 
-        if (HeartPlayer13.activeSelf && risulatoCalcolato == false)
+        if (HeartPlayer13.activeSelf && risultatoCalcolato == false)
         {
             HeartPlayer13.SetActive(false);
-            risulatoCalcolato = true;
+            risultatoCalcolato = true;
         }
-        else if (HeartPlayer12.activeSelf && risulatoCalcolato == false)
+        else if (HeartPlayer12.activeSelf && risultatoCalcolato == false)
         {
             HeartPlayer12.SetActive(false);
-            risulatoCalcolato = true;
+            risultatoCalcolato = true;
         }
-        else if (HeartPlayer11.activeSelf && risulatoCalcolato == false)
+        else if (HeartPlayer11.activeSelf && risultatoCalcolato == false)
         {
             HeartPlayer11.SetActive(false);
-            risulatoCalcolato = true;
+            risultatoCalcolato = true;
+            GameOver();
         }
 
         player1HasShoot = false;
@@ -101,27 +102,26 @@ public class Score : MonoBehaviour
         countdownController.timeToshootL = false;
 
         animator.SetBool("I'm Dead", true);
-        GameOver();
     }
 
     public void DeathPlayer2()
     {
         StartCoroutine(cameraShake.Shake(.15f, .4f));
 
-        if (HeartPlayer21.activeSelf && risulatoCalcolato == false)
+        if (HeartPlayer21.activeSelf && risultatoCalcolato == false)
         {
             HeartPlayer21.SetActive(false);
-            risulatoCalcolato = true;
+            risultatoCalcolato = true;
         }
-        else if (HeartPlayer22.activeSelf && risulatoCalcolato == false)
+        else if (HeartPlayer22.activeSelf && risultatoCalcolato == false)
         {
             HeartPlayer22.SetActive(false);
-            risulatoCalcolato = true;
+            risultatoCalcolato = true;
         }
-        else if (HeartPlayer23.activeSelf && risulatoCalcolato == false)
+        else if (HeartPlayer23.activeSelf && risultatoCalcolato == false)
         {
             HeartPlayer23.SetActive(false);
-            risulatoCalcolato = true;
+            risultatoCalcolato = true;
             GameOver();
         }
 
