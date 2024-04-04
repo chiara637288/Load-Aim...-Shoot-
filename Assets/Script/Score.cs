@@ -23,16 +23,18 @@ public class Score : MonoBehaviour
     public CameraShake cameraShake;
     public CountdownController countdownController;
 
-    public void Update()    //non può controllare costantemente, dovrebbe attivarsi solo dopo x tempo (magari sopo la fine delle animazioni di morti o di parry) //Se uno spara e l'artro muore subito non c'è nessuna condizione che controlli sta cosa 
+    public void Update()    
     {
         if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 0 && risultatoCalcolato == false)     //entrambi hanno perso e quindi non perdono cuori
         {
             roundBothDied = roundBothDied++;
+
             if (roundBothDied == 2)
             {
                 currentLevel--;
                 roundBothDied = 0;
             }
+             //Aggiungiamo una scruitta per far capire cos'è successo?
 
             risultatoCalcolato = true;
         }
@@ -135,7 +137,7 @@ public class Score : MonoBehaviour
 
     public void GameOver()
     {
-        StopAllCoroutines(); //funziona anche per coroutine che non sono nel loro script?
+        countdownController.StopAllCoroutines();
 
         if (HeartPlayer21.activeSelf == false)
         {
