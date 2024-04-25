@@ -9942,15 +9942,13 @@ MonoBehaviour:
   currentMatchPlayer2RResult: 3
   player1HasShoot: 0
   player2HasShoot: 0
-  risulatoCalcolato: 0
+  risultatoCalcolato: 0
   HeartPlayer11: {fileID: 2078378463}
   HeartPlayer12: {fileID: 1399457208}
   HeartPlayer13: {fileID: 1440077939}
   HeartPlayer21: {fileID: 2127220031}
   HeartPlayer22: {fileID: 1317602831}
   HeartPlayer23: {fileID: 505782030}
-  PlayerR: {fileID: 221556194}
-  PlayerL: {fileID: 815087477}
   animator: {fileID: 1930378906}
   animatorR: {fileID: 5593754191427818270}
   cameraShake: {fileID: 519420034}
@@ -22404,7 +22402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1517088335462816816, guid: acbee482a56ca59489ad71905118add9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.79
+      value: -0.751
       objectReference: {fileID: 0}
     - target: {fileID: 1517088335462816816, guid: acbee482a56ca59489ad71905118add9, type: 3}
       propertyPath: m_LocalPosition.y
