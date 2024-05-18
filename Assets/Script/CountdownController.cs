@@ -122,7 +122,12 @@ public class CountdownController : MonoBehaviour
         countdownShoot.SetActive(false);
         ShootText.SetActive(false);
 
-        yield return new WaitForSeconds(5f);
+
+        while (Score.player1HasShoot == false && Score.player2HasShoot == false)
+        {
+            yield return null;
+        }
+        yield return new WaitForSeconds(6f);
         countdown5.SetActive(true);
 
         yield return new WaitForSeconds(1f);
@@ -148,6 +153,9 @@ public class CountdownController : MonoBehaviour
         timeToshootL = false;
         timeToshootR = false;
         timeOver = true;
+
+        yield return new WaitForSeconds(2f);
+        RestartGame();
     }
 
     private void StopCountdown()
@@ -184,6 +192,8 @@ public class CountdownController : MonoBehaviour
 
     private void RestartGame()
     {
+        countdownTimesUp.SetActive(false);
+
         weaponL.GetComponent<WeaponL>().enabled = false;
         weaponL.GetComponent<WeaponL>().enabled = true;
 
