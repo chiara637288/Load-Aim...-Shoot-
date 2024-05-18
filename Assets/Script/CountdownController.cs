@@ -176,7 +176,10 @@ public class CountdownController : MonoBehaviour
         timeToshootR = false;
         timeOver = true;
 
-        Invoke("RestartGame", 2f);
+        if (Score.gameFinished == false)
+        {
+            Invoke("RestartGame", 2f);
+        }
     }
 
     private void RestartGame()

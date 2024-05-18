@@ -34,7 +34,7 @@ public class Score : MonoBehaviour
                 currentLevel--;
                 roundBothDied = 0;
             }
-             //Aggiungiamo una scruitta per far capire cos'è successo?
+             //Aggiungiamo una scritta per far capire cos'è successo?
 
             risultatoCalcolato = true;
         }
