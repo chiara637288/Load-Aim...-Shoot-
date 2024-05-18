@@ -187,16 +187,37 @@ public class CountdownController : MonoBehaviour
         weaponR.GetComponent<WeaponR>().enabled = false;
         weaponR.GetComponent<WeaponR>().enabled = true;
 
+        animator.SetBool("Time To Gun", false);
+        animatorR.SetBool("Time To Gun R", false);
+        animator.SetBool("Time To Parry", false);
+        animatorR.SetBool("Time To Parry R", false);
+        animator.SetBool("I'm Dead", false);
+        animatorR.SetBool("I'm Dead R", false);
+        animator.SetBool("Start Idle", false);
+        animatorR.SetBool("Start Idle R", false);
+        animator.SetBool("Parry Slash", false);
+        animatorR.SetBool("Parry Slash R", false);
+        animator.SetBool("Restart Game", false);
+        animatorR.SetBool("Restart Game R", false);
+        animator.SetBool("I Win", false);
+        animatorR.SetBool("I Win R", false);
+
         StopAllCoroutines();
 
         countdownTime = 3;
 
-        StartCoroutine(CountdownToStart());
+        if (Score.gameFinished == false) 
+            {
+            StartCoroutine(CountdownToStart());
+            }
     }
 
     private void StartGame()
     {
-        StartCoroutine(CountdownToStart());
+        if (Score.gameFinished == false)
+        {
+            StartCoroutine(CountdownToStart());
+        }
     }
     private void StartIdle()
     {

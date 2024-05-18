@@ -11,6 +11,7 @@ public class Score : MonoBehaviour
     public bool player2HasShoot = false;
     private int roundBothDied = 0;
     public bool risultatoCalcolato = false;
+    public bool gameFinished = false;
     public GameObject HeartPlayer11;
     public GameObject HeartPlayer12;
     public GameObject HeartPlayer13;
@@ -142,10 +143,12 @@ public class Score : MonoBehaviour
         {
             animator.SetBool("I Win", true);
         }
-        else if (HeartPlayer11.activeSelf == false)
+        if (HeartPlayer11.activeSelf == false)
         {
             animatorR.SetBool("I Win R", true);
         }
+
+        gameFinished = true;
 
         // fai apparire il tasto restart 
         // fai apprare il tasto per il main menu
