@@ -19,7 +19,7 @@ public class SliderManager : MonoBehaviour
     {
         master = masterSlider.value;
         PlayerPrefs.SetFloat("MasterVolume", master);
-    }
+    } 
 
     /// <summary>
     /// Save the Music Slider value
