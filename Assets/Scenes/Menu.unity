@@ -875,10 +875,10 @@ RectTransform:
   m_Father: {fileID: 1112132559}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12.418457, y: -5.0478516}
-  m_SizeDelta: {x: 887.7642, y: 310.7775}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 11.655975, y: 0}
+  m_SizeDelta: {x: 825.671, y: 464.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &216594146
 MonoBehaviour:
@@ -893,14 +893,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2737692, g: 0.051041294, b: 0.3490566, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8a909c5c99edb8f4d96a5ef6326a94d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c5c764133b80f14ab5100121dde55dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1393,10 +1393,10 @@ RectTransform:
   m_Father: {fileID: 1791036529}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12.418457, y: -5.0478516}
-  m_SizeDelta: {x: 887.7642, y: 310.7775}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 11.655975, y: 0}
+  m_SizeDelta: {x: 825.671, y: 464.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &400065423
 MonoBehaviour:
@@ -1411,14 +1411,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.0035343138, g: 0.3301887, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8a909c5c99edb8f4d96a5ef6326a94d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bfdcac3f753a00941921ab7689693fe4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5399,10 +5399,10 @@ RectTransform:
   m_Father: {fileID: 491912738}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12.418457, y: -5.0478516}
-  m_SizeDelta: {x: 887.7642, y: 310.7775}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 11.656, y: 0}
+  m_SizeDelta: {x: 825.671, y: 464.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406866660
 MonoBehaviour:
@@ -5417,14 +5417,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5, g: 0.42375728, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8a909c5c99edb8f4d96a5ef6326a94d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4b31c339767ac13408dcd339e5bb190e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6895,7 +6895,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MUSICHE...
+  m_text: "MUSICS\nThe Cherry Blossoms (Sakura Sakura) \xB7 Toshiko Yonekawa\r (Game
+    Music)\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 13b0097271173a54b9b8cd54cc9e5886, type: 2}
   m_sharedMaterial: {fileID: -4147074169383523043, guid: 13b0097271173a54b9b8cd54cc9e5886, type: 2}
