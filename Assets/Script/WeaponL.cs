@@ -186,6 +186,9 @@ public class WeaponL : MonoBehaviour
         animator.SetBool("Time To Gun", false);
         animator.SetBool("Time To Parry", true);
 
+        if (AudioManager.instance != null)
+            AudioManager.instance.FadeIn("ShotGun");
+
         // Hide the button after shooting
         switch (randomValue)
         {

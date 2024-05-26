@@ -6710,6 +6710,15 @@ MonoBehaviour:
     fadeInTime: 0
     fadeOutTime: 0
     source: {fileID: 0}
+  - name: ShotGun
+    clip: {fileID: 8300000, guid: 247be064992dde444b8d93dd6d3cf8ae, type: 3}
+    loop: 0
+    type: 1
+    priority: 0
+    volume: 0.261
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
   currentMusic:
     name: 
     clip: {fileID: 0}
