@@ -12,14 +12,12 @@ public class WeaponR : MonoBehaviour
     public GameObject ButtonO;
     public GameObject ButtonI;
     public GameObject ButtonU;
-    public GameObject ButtonL;
-    public GameObject ButtonK;
+    public GameObject ButtonJ;
 
-    public GameObject ButtonM; // Elencare i bottoni che quando accesi mostrano al giocatore quale pulsante premere.
+    public GameObject ButtonK; // Elencare i bottoni che quando accesi mostrano al giocatore quale pulsante premere.
     public GameObject ButtonN;
     public GameObject ButtonB;
-    public GameObject ButtonV;
-    public GameObject ButtonJ;
+    public GameObject ButtonL;
     public GameObject ButtonH;
     public CountdownController CountdownControllerIstance;
     public CountdownController CountdownControllerIstance1; 
@@ -28,8 +26,8 @@ public class WeaponR : MonoBehaviour
     private BulletL bulletL;
     public Animator animator;
 
-    string[] myArray = { "P", "O", "I", "U", "L", "K" };
-    string[] parryArray = { "M", "N", "B", "V", "J", "H" };
+    string[] myArray = { "P", "O", "I", "U", "J" };
+    string[] parryArray = { "K", "N", "B", "L", "H" };
     string randomValue;
     string randomValueParry;
 
@@ -76,12 +74,7 @@ public class WeaponR : MonoBehaviour
                 Shoot();
                 CountdownControllerIstance.timeToshootR = false;
             }
-            if (Input.GetKeyDown(KeyCode.L) && randomValue == "L")
-            {
-                Shoot();
-                CountdownControllerIstance.timeToshootR = false;
-            }
-            if (Input.GetKeyDown(KeyCode.K) && randomValue == "K")
+            if (Input.GetKeyDown(KeyCode.J) && randomValue == "J")
             {
                 Shoot();
                 CountdownControllerIstance.timeToshootR = false;
@@ -93,7 +86,7 @@ public class WeaponR : MonoBehaviour
             {
                 DisplayButtonParry(randomValueParry, CountdownControllerIstance.timeToshootR);                 // Display the corresponding button based on the random value
 
-                if (Input.GetKeyDown(KeyCode.M) && randomValueParry == "M")                               // Check if the corresponding key is pressed
+                if (Input.GetKeyDown(KeyCode.K) && randomValueParry == "K")                               // Check if the corresponding key is pressed
                 {
                     Parry();
                     bulletL.parryMomentL = false;
@@ -108,12 +101,7 @@ public class WeaponR : MonoBehaviour
                     Parry();
                     bulletL.parryMomentL = false;
                 }
-                if (Input.GetKeyDown(KeyCode.V) && randomValueParry == "V")
-                {
-                    Parry();
-                    bulletL.parryMomentL = false;
-                }
-                if (Input.GetKeyDown(KeyCode.J) && randomValueParry == "J")
+                if (Input.GetKeyDown(KeyCode.L) && randomValueParry == "L")
                 {
                     Parry();
                     bulletL.parryMomentL = false;
@@ -132,14 +120,12 @@ public class WeaponR : MonoBehaviour
             ButtonO.SetActive(false);
             ButtonI.SetActive(false);
             ButtonU.SetActive(false);
-            ButtonL.SetActive(false);
-            ButtonK.SetActive(false);
+            ButtonJ.SetActive(false);
 
-            ButtonM.SetActive(false);
+            ButtonK.SetActive(false);
             ButtonN.SetActive(false);
             ButtonB.SetActive(false);
-            ButtonV.SetActive(false);
-            ButtonJ.SetActive(false);
+            ButtonL.SetActive(false);
             ButtonH.SetActive(false);
         }
     }
@@ -161,11 +147,8 @@ public class WeaponR : MonoBehaviour
             case "U":
                 ButtonU.SetActive(true);
                 break;
-            case "L":
-                ButtonL.SetActive(true);
-                break;
-            case "K":
-                ButtonK.SetActive(true);
+            case "J":
+                ButtonJ.SetActive(true);
                 break;
         }
     }
@@ -174,8 +157,8 @@ public class WeaponR : MonoBehaviour
         // Display the corresponding button based on the input value
         switch (value2)
         {
-            case "M":
-                ButtonM.SetActive(true);
+            case "K":
+                ButtonK.SetActive(true);
                 break;
             case "N":
                 ButtonN.SetActive(true);
@@ -183,11 +166,8 @@ public class WeaponR : MonoBehaviour
             case "B":
                 ButtonB.SetActive(true);
                 break;
-            case "V":
-                ButtonV.SetActive(true);
-                break;
-            case "J":
-                ButtonJ.SetActive(true);
+            case "L":
+                ButtonL.SetActive(true);
                 break;
             case "H":
                 ButtonH.SetActive(true);
@@ -218,11 +198,8 @@ public class WeaponR : MonoBehaviour
             case "U":
                 ButtonU.SetActive(false);
                 break;
-            case "L":
-                ButtonL.SetActive(false);
-                break;
-            case "K":
-                ButtonK.SetActive(false);
+            case "J":
+                ButtonJ.SetActive(false);
                 break;
         }
     }
@@ -233,8 +210,8 @@ public class WeaponR : MonoBehaviour
 
         switch (randomValueParry)
         {
-            case "M":
-                ButtonM.SetActive(false);
+            case "K":
+                ButtonK.SetActive(false);
                 break;
             case "N":
                 ButtonN.SetActive(false);
@@ -242,11 +219,8 @@ public class WeaponR : MonoBehaviour
             case "B":
                 ButtonB.SetActive(false);
                 break;
-            case "V":
-                ButtonV.SetActive(false);
-                break;
-            case "J":
-                ButtonJ.SetActive(false);
+            case "L":
+                ButtonL.SetActive(false);
                 break;
             case "H":
                 ButtonH.SetActive(false);
