@@ -209,7 +209,8 @@ public class WeaponL : MonoBehaviour
     }
     void Parry()
     {
-        AudioManager.instance.FadeIn("Slash1");
+        if (AudioManager.instance != null)
+            AudioManager.instance.FadeIn("Slash1");
 
         switch (randomValueParryL)
         {
@@ -254,6 +255,7 @@ public class WeaponL : MonoBehaviour
 
     public void SlashStop()
     {
+        Debug.Log("Bruh");
         animator.SetBool("Parry Slash", false);
     }
 }

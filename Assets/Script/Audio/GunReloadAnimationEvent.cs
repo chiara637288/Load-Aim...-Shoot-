@@ -6,6 +6,7 @@ public class GunReloadAnimationEvent : MonoBehaviour
 {
     public void HandleAnimationEvent()
     {
-        AudioManager.instance.FadeIn("GunReload");
+        if (AudioManager.instance != null)
+            AudioManager.instance.FadeIn("GunReload");
     }
 }
