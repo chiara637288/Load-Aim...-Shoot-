@@ -255,7 +255,6 @@ public class WeaponL : MonoBehaviour
 
     public void SlashStop()
     {
-        Debug.Log("Bruh");
         animator.SetBool("Parry Slash", false);
     }
 }

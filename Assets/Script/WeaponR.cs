@@ -252,7 +252,6 @@ public class WeaponR : MonoBehaviour
     }
     public void SlashStopR()
     {
-        Debug.Log("Bruh");
         animator.SetBool("Parry Slash R", false);
     }
 }

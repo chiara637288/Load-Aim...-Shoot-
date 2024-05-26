@@ -216,6 +216,12 @@ public class CountdownController : MonoBehaviour
         animator.SetBool("I Win", false);
         animatorR.SetBool("I Win R", false);
 
+        Score.currentMatchPlayer1LResult = 3;
+        Score.currentMatchPlayer2RResult = 3;
+        Score.risultatoCalcolato = false;
+        Score.player1HasShoot = false;
+        Score.player2HasShoot = false;
+
         StopAllCoroutines();
 
         countdownTime = 3;

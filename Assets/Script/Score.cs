@@ -39,39 +39,39 @@ public class Score : MonoBehaviour
             risultatoCalcolato = true;
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1 && risultatoCalcolato == false)
+        else if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 1 && risultatoCalcolato == false)
         {
             currentLevel++;
 
             risultatoCalcolato = true;
         }
 
-        if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0 && risultatoCalcolato == false)
+        else if (currentMatchPlayer1LResult == 1 && currentMatchPlayer2RResult == 0 && risultatoCalcolato == false)
         {
             DeathPlayer2();
         }
 
-        if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1 && risultatoCalcolato == false)
+        else if (currentMatchPlayer1LResult == 0 && currentMatchPlayer2RResult == 1 && risultatoCalcolato == false)
         {
             DeathPlayer1();
         }
 
-        if (player1HasShoot == false && currentMatchPlayer1LResult == 0 && risultatoCalcolato == false)
+        else if (player1HasShoot == false && currentMatchPlayer1LResult == 0 && risultatoCalcolato == false)
         {
             DeathPlayer1();
         }
 
-        if (player2HasShoot == false && currentMatchPlayer2RResult == 0 && risultatoCalcolato == false)
+        else if (player2HasShoot == false && currentMatchPlayer2RResult == 0 && risultatoCalcolato == false)
         {
             DeathPlayer2();
         }
 
-        if (currentMatchPlayer1LResult == 2) // questo evento forse è meglio toglierlo, conviene fare che se nessuno ha sparato il conto alla roveglia non parte
+        else if (currentMatchPlayer1LResult == 2) // questo evento forse è meglio toglierlo, conviene fare che se nessuno ha sparato il conto alla roveglia non parte
         {
             //nulla, vi siete dimenticati di sparate?
         }
 
-        if (currentMatchPlayer2RResult == 2)
+        else if (currentMatchPlayer2RResult == 2)
         {
 
         }
