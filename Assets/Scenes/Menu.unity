@@ -2927,7 +2927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.9223633, y: -31.150635}
+  m_AnchoredPosition: {x: 6.9223633, y: -31.15039}
   m_SizeDelta: {x: 13.8448, y: 62.3013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608784465
@@ -6848,6 +6848,33 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ShotGun
     clip: {fileID: 8300000, guid: 247be064992dde444b8d93dd6d3cf8ae, type: 3}
+    loop: 0
+    type: 1
+    priority: 0
+    volume: 0.261
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: BodyFall1
+    clip: {fileID: 8300000, guid: d6c3df3fb983ccd4c95db779cf642af5, type: 3}
+    loop: 0
+    type: 1
+    priority: 0
+    volume: 0.261
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: BodyFall2
+    clip: {fileID: 8300000, guid: 7305502d5b669554db70726fc07eeab5, type: 3}
+    loop: 0
+    type: 1
+    priority: 0
+    volume: 0.261
+    fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: e9a1f332f5da3db478c26f3d9d9835e4, type: 3}
     loop: 0
     type: 1
     priority: 0
