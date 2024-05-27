@@ -9529,6 +9529,10 @@ MonoBehaviour:
   HeartPlayer21: {fileID: 2127220031}
   HeartPlayer22: {fileID: 1317602831}
   HeartPlayer23: {fileID: 505782030}
+  samurai1WinsText: {fileID: 698044591}
+  samurai2WinsText: {fileID: 1405842356}
+  samurai1Wins: {fileID: 543450901}
+  samurai2Wins: {fileID: 1996578041}
   animator: {fileID: 1930378906}
   animatorR: {fileID: 5593754191427818270}
   cameraShake: {fileID: 519420034}

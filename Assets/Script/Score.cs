@@ -18,6 +18,10 @@ public class Score : MonoBehaviour
     public GameObject HeartPlayer21;
     public GameObject HeartPlayer22;
     public GameObject HeartPlayer23;
+    public GameObject samurai1WinsText;
+    public GameObject samurai2WinsText;
+    public GameObject samurai1Wins;
+    public GameObject samurai2Wins;
     public Animator animator;
     public Animator animatorR;
     public CameraShake cameraShake;
@@ -142,17 +146,30 @@ public class Score : MonoBehaviour
         if (HeartPlayer21.activeSelf == false)
         {
             animator.SetBool("I Win", true);
+            Invoke("Samurai1Wins", 2f);
         }
         if (HeartPlayer11.activeSelf == false)
         {
             animatorR.SetBool("I Win R", true);
+            Invoke("Samurai2Wins", 2f);
         }
 
         gameFinished = true;
 
         // fai apparire il tasto restart 
         // fai apprare il tasto per il main menu
+    }
 
+    private void Samurai1Wins()
+    {
+        samurai1Wins.SetActive(true);
+        samurai1WinsText.SetActive(true);
+    }
+
+    private void Samurai2Wins()
+    {
+        samurai2Wins.SetActive(true);
+        samurai2WinsText.SetActive(true);
     }
 
 }
