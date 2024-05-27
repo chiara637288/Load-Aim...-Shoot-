@@ -107,6 +107,9 @@ public class BulletR : MonoBehaviour
         {
             inTrigger = false;
             parryMomentR = false; // non è quando esce dal rallentatore ma quando tocca il collider del PG
+
+            if (AudioManager.instance != null)
+                AudioManager.instance.FadeIn("Hit");
         }
     }
 }

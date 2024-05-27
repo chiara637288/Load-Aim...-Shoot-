@@ -108,6 +108,9 @@ public class BulletL : MonoBehaviour
         {
             inTrigger = false;
             parryMomentL = false;
+
+            if (AudioManager.instance != null)
+                AudioManager.instance.FadeIn("Hit");
         }
     }
 }
