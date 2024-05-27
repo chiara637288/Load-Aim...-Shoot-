@@ -92,6 +92,9 @@ public class BulletR : MonoBehaviour
         if (other.gameObject.CompareTag("TriggerSconfitta") && GetComponent<SpriteRenderer>().enabled)
         {
             Score.currentMatchPlayer1LResult = 0;
+
+            if (AudioManager.instance != null)
+                AudioManager.instance.FadeIn("Hit");
         }
 
         if (other.gameObject.CompareTag("BulletKiller"))
@@ -107,9 +110,6 @@ public class BulletR : MonoBehaviour
         {
             inTrigger = false;
             parryMomentR = false; // non è quando esce dal rallentatore ma quando tocca il collider del PG
-
-            if (AudioManager.instance != null)
-                AudioManager.instance.FadeIn("Hit");
         }
     }
 }

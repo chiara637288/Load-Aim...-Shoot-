@@ -93,6 +93,9 @@ public class BulletL : MonoBehaviour
         if (other.gameObject.CompareTag("TriggerSconfitta") && GetComponent<SpriteRenderer>().enabled)
         {
             Score.currentMatchPlayer2RResult = 0;
+
+            if (AudioManager.instance != null)
+                AudioManager.instance.FadeIn("Hit");
         }
 
         if (other.gameObject.CompareTag("BulletKiller"))
@@ -108,9 +111,6 @@ public class BulletL : MonoBehaviour
         {
             inTrigger = false;
             parryMomentL = false;
-
-            if (AudioManager.instance != null)
-                AudioManager.instance.FadeIn("Hit");
         }
     }
 }
