@@ -8,7 +8,7 @@ public class MainMenuMusic : MonoBehaviour
     void Start()
     {
         if (AudioManager.instance != null)
-            AudioManager.instance.FadeIn("Musica2");
+            AudioManager.instance.FadeIn("Stronzo");
 
     }
 }

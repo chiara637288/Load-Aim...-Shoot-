@@ -223,4 +223,10 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
         }
     }
+    void Start()
+    {
+        if (AudioManager.instance != null)
+            AudioManager.instance.FadeIn("Stronzo");
+
+    }
 }

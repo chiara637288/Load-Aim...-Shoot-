@@ -1336,7 +1336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 11.65625, y: -308}
+  m_AnchoredPosition: {x: 11.65625, y: -303}
   m_SizeDelta: {x: 1393.2131, y: 49.7924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &305171699
@@ -1386,8 +1386,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.83
-  m_fontSizeBase: 37.83
+  m_fontSize: 23.7
+  m_fontSizeBase: 23.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2109,7 +2109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 11.65625, y: -312}
+  m_AnchoredPosition: {x: 11.65625, y: -290}
   m_SizeDelta: {x: 1393.2131, y: 49.7924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &447325762
@@ -2132,10 +2132,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '                 Welcome to Load, Aim... Shoot!
+  m_text: '                                    Welcome to Load, Aim... Shoot!
 
-    In this game, two
-    samurais face off in a deadly duel to determine who is the fastest samurai.'
+    In
+    this game, two samurais face off in a deadly duel to determine who is the fastest
+    samurai.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 13b0097271173a54b9b8cd54cc9e5886, type: 2}
   m_sharedMaterial: {fileID: -4147074169383523043, guid: 13b0097271173a54b9b8cd54cc9e5886, type: 2}
@@ -2162,8 +2163,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.83
-  m_fontSizeBase: 37.83
+  m_fontSize: 23.7
+  m_fontSizeBase: 23.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7463,17 +7464,8 @@ MonoBehaviour:
     loop: 1
     type: 0
     priority: 0
-    volume: 0.198
-    fadeInTime: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: Musica2
-    clip: {fileID: 8300000, guid: 801163b51dfe0474ba7baabfec47e040, type: 3}
-    loop: 1
-    type: 0
-    priority: 0
-    volume: 0.217
-    fadeInTime: 0
+    volume: 0.251
+    fadeInTime: 0.01
     fadeOutTime: 0
     source: {fileID: 0}
   - name: Slash1
@@ -7546,6 +7538,15 @@ MonoBehaviour:
     priority: 0
     volume: 0.265
     fadeInTime: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Stronzo
+    clip: {fileID: 8300000, guid: 801163b51dfe0474ba7baabfec47e040, type: 3}
+    loop: 1
+    type: 0
+    priority: 0
+    volume: 0.275
+    fadeInTime: 0.01
     fadeOutTime: 0
     source: {fileID: 0}
   currentMusic:
@@ -7648,7 +7649,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 11.65625, y: -308}
+  m_AnchoredPosition: {x: 11.65625, y: -304}
   m_SizeDelta: {x: 1393.2131, y: 49.7924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1838492240
@@ -7699,8 +7700,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.83
-  m_fontSizeBase: 37.83
+  m_fontSize: 23.7
+  m_fontSizeBase: 23.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7816,8 +7817,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 818cbdcad999f954181efcf52c6347aa, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.298
+  m_PlayOnAwake: 0
+  m_Volume: 0.102
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8839,7 +8840,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 11.65625, y: -306}
+  m_AnchoredPosition: {x: 11.65625, y: -291}
   m_SizeDelta: {x: 1393.2131, y: 49.7924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2132021010
@@ -8890,8 +8891,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.83
-  m_fontSizeBase: 37.83
+  m_fontSize: 23.7
+  m_fontSizeBase: 23.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

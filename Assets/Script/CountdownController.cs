@@ -39,8 +39,13 @@ public class CountdownController : MonoBehaviour
 
     private void Start()
     {
+
         if (AudioManager.instance != null)
-        AudioManager.instance.FadeIn("Musica1");
+        {
+            AudioManager.instance.Stop("Stronzo");
+            AudioManager.instance.FadeIn("Musica1");
+        }
+
 
         timeToshootL = false;
         timeToshootR = false;
